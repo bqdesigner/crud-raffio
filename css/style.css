@@ -39,7 +39,7 @@
   font-size: 1.875rem;
 }
 
-.lado-dir a, .meus-raffs h2, .perfil label {
+.lado-dir .tab-menu a, .meus-raffs h2, .perfil label {
   font-size: 1.375rem;
 }
 
@@ -47,7 +47,7 @@
   font-size: 1rem;
 }
 
-.checkbox-style-1 + label, .footer-login span, .footer-page span, .meus-raffs ul, .meus-raffs .links {
+.esqueceu-senha, .checkbox-style-1 + label, .footer-login span, .footer-page span, .meus-raffs ul, .meus-raffs .links {
   font-size: 0.75rem;
 }
 
@@ -156,20 +156,20 @@
   margin-bottom: 4em;
 }
 
-.lado-dir a {
+.lado-dir .tab-menu a {
   font-family: "Roboto-bold";
   color: #767d7d;
 }
 
-.lado-dir a:hover {
+.lado-dir .tab-menu a:hover {
   text-decoration: none;
 }
 
-.lado-dir a.active {
+.lado-dir .tab-menu a.active {
   color: #2e3131;
 }
 
-.lado-dir a:first-child {
+.lado-dir .tab-menu a:first-child {
   margin-right: 2rem;
 }
 
@@ -244,6 +244,21 @@
   margin-top: -16px;
   background-color: #f6f4f4;
   padding: 4px 16px;
+}
+
+.esqueceu-senha {
+  font-family: "Roboto-bold";
+}
+
+.esqueceu-senha a {
+  color: #2e3131;
+  text-decoration: none;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.esqueceu-senha a:hover {
+  color: #eb3107;
 }
 
 .checkbox-style-1 {

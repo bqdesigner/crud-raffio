@@ -50,11 +50,15 @@
                         endif;
                         unset($_SESSION['nao_autenticado']);
                     ?>
-                    <div class="checkbox-group">
+                    <!-- <div class="checkbox-group">
                         <input type="checkbox" name="checkbox-style-1" id="checkbox-style-1" class="checkbox-style-1">
                         <label for="checkbox-style-1"> Mantenha logado </label>
+                    </div> -->
+                    <div class="esqueceu-senha">
+                         <a href="esqueceu-senha.php"> Esqueceu sua senha? </a> 
                     </div>
-                    <button id="enviar" type="submit" class="btn-login button-primary mt-5"> Enviar </button>
+                    
+                    <button id="enviar" type="submit" class="btn-login button-primary mt-5"> Entrar </button>
                 </form>
             </div>
         </div>

@@ -20,19 +20,21 @@
         width: 100%;
         margin-bottom: 4em;
     }
-    a {
-        @extend %titulo-1;
-        font-family: $roboto-b;
-        color: $color-secundary-medium;
-        &:hover {
-            text-decoration: none;
+    .tab-menu {
+        a {
+            @extend %titulo-1;
+            font-family: $roboto-b;
+            color: $color-secundary-medium;
+            &:hover {
+                text-decoration: none;
+            }
         }
-    }
-    a.active {
-        color: $color-secundary;
-    }
-    a:first-child {
-        margin-right: 2rem;
+        a.active {
+            color: $color-secundary;
+        }
+        a:first-child {
+            margin-right: 2rem;
+        }
     }
 }
 // Itens TAB
@@ -98,6 +100,18 @@
     margin-top: -16px;
     background-color: $color-secundary-light;
     padding: 4px 16px;
+}
+.esqueceu-senha {
+    font-family: $roboto-b;
+    @extend %span;
+    a {
+        color: $color-secundary;
+        text-decoration: none;
+        transition: all .1s linear;
+        &:hover {
+            color: $color-primary;
+        }
+    }
 }
 .btn-login {
     @extend %button-primary;
