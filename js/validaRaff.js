@@ -1,7 +1,7 @@
 // Validando o envio do Raff
 const desc = document.getElementById('desc_proj').onblur = function() {
     // e.preventDefault();
-    if (desc.value == '' || desc.value.length <= 3) 
+    if (this.value.length <= 3 || this.value == '') 
         alert("Ideia curta.");
 }
 

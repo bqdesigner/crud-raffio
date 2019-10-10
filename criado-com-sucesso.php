@@ -16,9 +16,15 @@ include_once('actions/connection.php');
 </head>
 <body>
     
-    <h2> O Raff, , foi criado com sucesso! </h2>
+    <h2> O Raff, <?php echo $_SESSION['raff-criado'] ?>, foi criado com sucesso! </h2>
     <a href="index.php"> Dashboard </a>
     <a href="meus-raffs.php"> Meus Raffs </a>
 
 </body>
 </html>
+
+<?php
+
+unset($_SESSION['raff-criado']);
+
+?>

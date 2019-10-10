@@ -11,6 +11,13 @@ $info_usuario = "SELECT * FROM usuarios where id_usuario = '{$id_usuario}'";
 $resultado_usuario = mysqli_query($conexao, $info_usuario);
 $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 $id_usuario = $row_usuario['id_usuario'];
+$first_login = $row_usuario['first_login'];
+
+if ($first_login) {
+    $sql = "UPDATE usuarios SET first_login = false  where id_usuario = '{$id_usuario}'";
+    $atualizarRaff = mysqli_query($conexao, $sql);
+}
+
 
 ?>
 

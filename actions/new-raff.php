@@ -18,7 +18,8 @@ if (isset($_POST['enviar'])) {
     $ref = $_POST['ref_proj'];
     $upload = $_FILES['imagem_proj'];
     $consideracao = $_POST['desc_consideracao_proj'];
-    $finalizar_raff = $_POST['email_proj'];
+	$finalizar_raff = $_POST['email_proj'];
+	$_SESSION['raff-criado'] = $nome_raff;
 
     // Se a foto estiver sido selecionada
 	if (!empty($upload["name"])) {
