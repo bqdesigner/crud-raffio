@@ -4,8 +4,8 @@ include_once('actions/verifica-login.php');
 include_once('actions/connection.php');
 
 // Pegando o ID do usuário
-$nome = $_SESSION['nome'];
-$info_usuario = "SELECT * FROM usuarios where nome = '{$nome}'";
+$id_usuario = $_SESSION['id_usuario'];
+$info_usuario = "SELECT * FROM usuarios where id_usuario = '{$id_usuario}'";
 $resultado_usuario = mysqli_query($conexao, $info_usuario);
 $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 $id_usuario = $row_usuario['id_usuario'];

@@ -76,7 +76,7 @@ if (isset($_POST['enviar'])) {
 
             $inserirRaff = mysqli_query($conexao, $sql);
 
-            header('Location: ../meus-raffs.php');
+            header('Location: ../criado-com-sucesso.php');
             exit();
                     
 			// // Se os dados forem inseridos com sucesso

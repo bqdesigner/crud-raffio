@@ -24,8 +24,9 @@
     // Caso não existe, salva o usuário no banco
     date_default_timezone_set('America/Sao_Paulo');
     $date = date("Y-m-d H:i:s");
-    $createUser = mysqli_prepare ($conexao, 'INSERT INTO usuarios (nome, usuario, senha, data_cadastro) VALUES (?, ?, ?, ?)');
-    mysqli_stmt_bind_param($createUser, 'ssss', $nome, $usuario, $senha, $date);
+    $stateLogin = true;
+    $createUser = mysqli_prepare ($conexao, 'INSERT INTO usuarios (nome, usuario, senha, data_cadastro, first_login) VALUES (?, ?, ?, ?, ?)');
+    mysqli_stmt_bind_param($createUser, 'ssssi', $nome, $usuario, $senha, $date, $stateLogin);
     if (mysqli_stmt_execute($createUser)) {
         $_SESSION['usuario_novo'] = true;
         header('Location: ../login.php');

@@ -8,12 +8,14 @@ CREATE TABLE usuarios (
   nome VARCHAR(100) NOT NULL,
   data_cadastro DATETIME NULL,
   data_modificado DATETIME NULL,
+  first_login TINYINT NOT NULL,
   PRIMARY KEY (id_usuario)
 );
 
 select * from usuarios;
 drop table usuarios;
 desc usuarios;
+truncate usuarios;
 
 alter table usuarios add data_modificado DATETIME NOT NULL;
 alter table usuarios change data_modificado data_modificado DATETIME NULL;
