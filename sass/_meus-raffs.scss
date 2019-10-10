@@ -1,0 +1,86 @@
+.meus-raffs {
+    width: 100%;
+    min-height: 600px;
+    h1 {
+        @extend %titulo-create-raff;
+        font-family: $roboto-b;
+        color: $color-secundary;
+        margin-bottom: 3rem;
+    }
+    .raff {
+        @include width(260px);
+        @include height(300px);
+        background-color: $default-color-1;
+        border-radius: 7px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: space-between;
+        float: left;
+        margin-right: 1.5rem;
+        margin-bottom: 2rem;
+        @extend %sombra-1;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            background: $color-primary;
+            @include width(124px);
+            @include height(10px);
+            top: 0;
+            position: absolute;
+            z-index: 1;
+        }
+    }
+    h2 {
+        font-family: $roboto-b;
+        color: $color-secundary;
+        @extend %titulo-1;
+        margin-top: 3rem;
+        text-align: center;
+        
+    }
+    ul {
+        font-family: $roboto-r;
+        @extend %span;
+    }
+    .links {
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        font-family: $roboto-b;
+        @extend %span;
+        img {
+            @include width(16px);
+            height: auto;
+            margin-right: .5rem;
+        }
+        .excluir {
+            transform: rotate(45deg);
+        }
+        a {
+            color: $color-secundary;
+            text-decoration: none;
+            @include transition(all 0.3s ease-in-out 0s);
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+    .no-raff {
+        width: 100%;
+        @include height(300px);
+        font-family: $roboto-r;
+        @extend %texto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; 
+        img {
+            @include width(350px);
+            height: auto;
+        }
+    }
+}

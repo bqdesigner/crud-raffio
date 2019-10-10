@@ -1,0 +1,42 @@
+.header-page {
+    width: 100%;
+    @include height(112px);
+    background-color: $default-color-1;
+    font-family: $roboto-b;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @extend %sombra-1;
+    border-top: 2px solid $color-primary;
+    nav {
+        @include transition(all 0.3s ease-in-out 0s);
+        ul {
+            list-style: none;
+            @include fontSize(16px);
+            li {
+                margin-right: 2rem;
+                display: inline;
+                a {
+                    color: $color-primary;
+                    text-decoration: none !important;
+                    @include transition(all 0.3s ease-in-out 0s);
+                    padding: 10px 10px;
+                    &:hover {
+                        color: $color-primary-strong;
+                    }
+                }
+            }
+        }
+    }
+    .logout {
+        a {
+            color: $color-primary;
+            text-decoration: none !important;
+            @include transition(all 0.3s ease-in-out 0s);
+            padding: 10px 10px;
+            &:hover {
+                color: $color-primary-strong;
+            }
+        }
+    }
+}

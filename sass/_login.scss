@@ -1,0 +1,189 @@
+.lado-esq {
+    width: 45%;
+    height: 100vh;
+    background-color: $color-primary-medium;
+    float: left;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end;
+}
+.lado-dir {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    height: 100vh;
+    background-color: $color-secundary-light;
+    float: right;
+    padding: 3rem;
+    position: relative;
+    .header {
+        width: 100%;
+        margin-bottom: 4em;
+    }
+    a {
+        @extend %titulo-1;
+        font-family: $roboto-b;
+        color: $color-secundary-medium;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    a.active {
+        color: $color-secundary;
+    }
+    a:first-child {
+        margin-right: 2rem;
+    }
+}
+// Itens TAB
+.item {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    transform: translate3d(-50px, 0px, 0px);
+}
+  
+.item.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    top: auto;
+    transition: 1s all ease;
+    transform: translate3d(0px, 0px, 0px);
+}
+// Formulário
+.input-group {
+    position: relative;
+    input[type=text], input[type=password] {
+        font-family: $roboto-r;
+        @include fontSize(16px);
+        margin-bottom: 1rem;
+        background: none;
+        @include width(558px);
+        @include height(53px);
+        border-radius: 7px;
+        border: 1px solid $color-secundary;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+            border-color: $color-secundary;
+            color: $color-secundary;
+        }
+    }
+    .placeholder {
+        font-family: $roboto-r;
+        @extend %texto;
+        position: absolute;
+        top: 35%;
+        left: 1rem;
+        margin-top: -8px;
+        color: $color-secundary;
+        background-color: inherit;
+        transition: all .1s linear;
+        pointer-events: none;
+    }
+    #view-pass {
+        position: relative;
+        right: 3rem;
+        top: .5rem;
+    }
+}
+.input-group input:focus + .placeholder, .input-group input:not(:invalid) + .placeholder  {
+    color: $color-secundary;
+    font-family: $roboto-b;
+    top: 0%;
+    margin-top: -16px;
+    background-color: $color-secundary-light;
+    padding: 4px 16px;
+}
+.btn-login {
+    @extend %button-primary;
+}
+.btn-login-secundary {
+    @extend %button-secundary;
+}
+// Checkbox
+.checkbox-style-1 {
+    position: absolute;
+    opacity: 0;
+    & + label {
+        position: relative;
+        cursor: pointer;
+        font-family: $roboto-b;
+        @extend %span;
+        color: $color-secundary;
+    }
+    & + label:before {
+        content: '';
+        margin-right: 16px;
+        margin-top: -3px;
+        display: inline-block;
+        vertical-align: text-top;
+        width: 20px;
+        height: 20px;
+        background: none;
+        border: 1px solid $color-context-gray;
+        border-radius: 4px;
+    }
+    &:hover + label:before {
+        border: 1px solid $color-success;
+    }
+    &:focus + label:before {
+        box-shadow: 0 0 0 3px rgba($color-success, 0.12);
+    }
+    &:checked + label:before {
+        border: 1px solid $color-success;
+    }
+    &:checked + label:after {
+        content: '';
+        position: absolute;
+        left: 5px;
+        top: 8px;
+        // color: $color-success;
+        background: $color-success;
+        width: 2px;
+        height: 2px;
+        box-shadow: 
+          2px 0 0 $color-success,
+          4px 0 0 $color-success,
+          4px -2px 0 $color-success,
+          4px -4px 0 $color-success,
+          4px -6px 0 $color-success,
+          4px -8px 0 $color-success;
+        transform: rotate(45deg);
+      }
+}
+.msg-danger {
+    @extend %msg-danger;
+    width: 558px;
+    margin: 1.5rem 0;
+}
+.msg-attention {
+    @extend %msg-attention;
+    width: 558px;
+    margin: 1.5rem 0;
+}
+.msg-success {
+    @extend %msg-success;
+    width: 558px;
+    margin: 1.5rem 0;
+}
+
+.footer-login {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    span {
+        font-family: $roboto-b;
+        @extend %span;
+    }
+    img {
+        margin-right: 1rem;
+    }
+}

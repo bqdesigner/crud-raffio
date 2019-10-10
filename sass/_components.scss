@@ -1,0 +1,154 @@
+$color-primary: #eb3107;
+$color-primary-light: #f73307;
+$color-primary-medium: #d12b06;
+$color-primary-strong: #ab2405;
+$color-primary-dark: #6b1603;
+$color-secundary: #2e3131;
+$color-secundary-light: #f6f4f4;
+$color-secundary-medium: #767d7d;
+$color-secundary-strong: #3a3e3e;
+$color-secundary-dark: #303333;
+$color-success: #33f008;
+$color-success-light: #b8f0bb;
+$color-success-medium: #aaf693;
+$color-success-strong: #98fb7a;
+$color-success-dark: #79ff4f;
+$color-error: #ff4343;
+$color-attention: #f1c40f;
+$color-context-gray: #bfbfbf;
+$default-color-1: #ffffff;
+
+// Fontes
+$roboto-b: 'Roboto-bold';
+$roboto-r: 'Roboto-regular';
+$roboto-l: 'Roboto-light';
+
+
+// Mixin Sombra
+@mixin box-shadow($shadow...) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// Mixin  transições
+@mixin transition($transition-1) {
+    -webkit-transition: $transition-1;
+    transition: $transition-1;
+}
+@mixin transform {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+// Sombras
+%sombra-1 {
+    @include box-shadow(0px 15px 30px rgba(0,0,0, 0.08));
+    @include transition(all 0.3s ease-in-out 0s);
+    &:hover {
+        @include box-shadow(0px 15px 30px rgba(0,0,0, 0.05));
+    }
+}
+
+// Converter PX para REM
+@function calculateRem($size) {
+    $remSize: $size / 16px;
+    @return #{$remSize}rem;
+}
+@mixin width ($size) {
+    width: calculateRem($size);
+}
+@mixin height ($size) {
+    height: calculateRem($size);
+}
+@mixin fontSize ($size) {
+    font-size: calculateRem($size);
+}
+
+// Tamanhos
+%titulo-create-raff {
+    @include fontSize(30px);
+} 
+%titulo-1 {
+    @include fontSize(22px);
+} 
+%texto {
+    @include fontSize(16px);
+} 
+%span {
+    @include fontSize(12px);
+} 
+
+// botoes
+%button-structure {
+    border-radius: 7px;
+    padding: 1rem 3rem;
+    @include transition(all 0.3s ease-in-out 0s);
+    @include fontSize(16px);
+    font-family: $roboto-b;
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    &:hover {
+        text-decoration: none;
+        
+    }
+}
+%button-primary {
+    background-color: $color-primary;
+    color: $default-color-1;
+    @include box-shadow(0px 21px 32px rgba($color-primary, 0.2));
+    @extend %button-structure;
+    &:hover {
+        background-color: $color-primary-medium;
+        color: $default-color-1;
+        @include box-shadow(0px 11px 22px rgba($color-primary, 0.1));
+    }
+}
+%button-secundary {
+    border: 1px solid $color-context-gray;
+    background-color: transparent;
+    color: $color-context-gray;
+    @extend %button-structure;
+    &:hover {
+        border-color: $color-secundary-medium;
+        color: $color-secundary-medium;
+    }
+}
+
+// Mensagens
+%msg-structure {
+    font-family: $roboto-b;
+    @include fontSize(16px);
+    padding: 1rem;
+    display: block;
+    border-radius: 7px;
+}
+
+%msg-danger {
+    @extend %msg-structure;
+    background-color: rgba($color-error, .2);
+    color: $color-error;
+    border: 1px solid $color-error;
+}
+
+%msg-attention {
+    @extend %msg-structure;
+    background-color: rgba($color-attention, .2);
+    color: $color-attention;
+    border: 1px solid $color-attention;
+}
+
+%msg-success {
+    @extend %msg-structure;
+    background-color: rgba($color-success, .2);
+    color: $color-success;
+    border: 1px solid $color-success;
+}
+
+
+

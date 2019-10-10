@@ -1,0 +1,29 @@
+@import 'login';
+@import 'header';
+@import 'footer';
+@import 'create-raff';
+@import 'meus-raffs';
+@import 'perfil';
+@import 'modal';
+@import 'index';
+
+body {
+    background-color: $color-secundary-light;   
+}
+.img-icone {
+    @include width(24px);
+    height: auto;
+}
+.logo-lg {
+    @include width(150px);
+    @include height(54px);
+}
+.cta-criar-raff {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+}
+
+  

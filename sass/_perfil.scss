@@ -1,0 +1,51 @@
+.perfil {
+    width: 100%;
+    min-height: 700px;
+    .photo-profile {
+        @include width(150px);
+        @include height(150px);
+        background-color: $default-color-1;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+    h2 {
+        @extend %titulo-create-raff;
+        font-family: $roboto-b;
+        color: $color-secundary;
+        margin-bottom: 3rem;
+    }
+    label, input[type=text] {
+        display: block;
+    }
+    label {
+        margin: 1rem 0;
+        font-family: $roboto-r;
+        color: $color-secundary;
+        @extend %titulo-1;
+    }
+    input[type=text], input[type=password] {
+        font-family: $roboto-r;
+        @include fontSize(16px);
+        margin-bottom: 1rem;
+        background: none;
+        width: 100%;
+        @include height(53px);
+        border-radius: 7px;
+        border: 1px solid $color-secundary;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+        &:focus {
+            outline: none;
+            border-color: $color-secundary;
+            color: $color-secundary;
+        }
+    }
+    input[type=submit] {
+        margin-top: 2rem;
+        @extend %button-primary;
+    }
+}

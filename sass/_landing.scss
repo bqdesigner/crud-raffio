@@ -1,0 +1,65 @@
+.landing{
+    header{
+        width: 100%;
+        @include height(112px);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 3rem;
+        a {
+           @extend %button-primary;
+           float: right;
+        }
+    }
+    
+    main{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+        justify-content: center;
+        position: relative;
+        @include height(700px);
+        h1{
+            span{
+                display: block;
+                font-family: $roboto-b;
+                &:first-child{
+                    @include fontSize(64px);
+                    color:$color-primary;
+                }
+                &:last-child{
+                    @include fontSize(48px);
+                    color: $color-secundary;
+                }
+            }
+        }
+        img{
+            // position: absolute;
+            top: 10rem;
+        }
+    }
+    .conteudo {
+        width: 100%;
+        @include height(1000px);
+    }
+    footer{
+        width: 100%;
+        @include height(207px);
+        background-color: $color-primary-strong;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            font-family: $roboto-b;
+            @include fontSize(12px);
+            color: $default-color-1;
+            &:first-child{
+                float: left;
+            }
+            &:last-child{
+                float: right;
+            }
+        }
+    }
+}

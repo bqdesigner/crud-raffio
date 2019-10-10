@@ -1,0 +1,12 @@
+.btn-criar-raff {
+    @extend %button-primary;
+}
+.new-raff {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    min-height: 800px;
+    //max-height: 80vh;
+}

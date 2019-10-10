@@ -1,0 +1,17 @@
+.footer-page {
+    width: 100%;
+    @include height(200px);
+    background-color: $color-primary-strong;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3rem;
+    span {
+        font-family: $roboto-r;
+        @extend %span;
+        color: $default-color-1;
+        letter-spacing: 1px;
+        margin-top: 2rem;
+    }
+}

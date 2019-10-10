@@ -1,0 +1,112 @@
+.create-raff {
+    #formCreateRaff {
+        h2 {
+            font-family: $roboto-b;
+            @include fontSize(30px);
+            margin-bottom: 2rem;
+            &:first-child {
+                margin-top: 10rem;
+            }
+        }
+        .input-group {
+            margin-bottom: 2rem;
+            input[type=text], input[type=email], select {
+                font-family: $roboto-r;
+                @include fontSize(16px);
+                margin-bottom: 1rem;
+                background: none;
+                width: 100%;
+                @include height(53px);
+                border-radius: 7px;
+                border: 1px solid $color-secundary;
+                padding-left: 20px;
+                padding-right: 20px;
+                box-sizing: border-box;
+                &:focus {
+                    outline: none;
+                    border-color: $color-secundary;
+                    color: $color-secundary;
+                }
+            }
+            select {
+                option {
+                    padding: 2rem;
+                }
+                
+            }
+            textarea {
+                font-family: $roboto-r;
+                @include fontSize(16px);
+                background: none;
+                width: 100%;
+                @include height(250px);
+                border-radius: 7px;
+                border: 1px solid $color-secundary;
+                padding: 20px 20px 0 20px;
+                box-sizing: border-box;
+                resize: none;
+                &:focus {
+                    outline: none;
+                    border-color: $color-secundary;
+                    color: $color-secundary;
+                }
+            }
+        }
+        input[type=file] {
+            width: 0.1px;
+            height: 0.1px;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: -1;
+        }
+        #imagem_proj + label {
+            @extend %button-primary;
+            cursor: pointer;
+        }
+        .nome-imagem {
+            font-family: $roboto-r;
+            @extend %texto;
+            color: $color-secundary;
+            display: inline-block;
+            margin-top: 2rem;
+        }
+        .placeholder-textarea {
+            font-family: $roboto-r;
+            @extend %texto;
+            position: absolute;
+            top: 10%;
+            left: 1.5rem;
+            margin-top: -8px;
+            color: $color-secundary;
+            background-color: inherit;
+            transition: all .1s linear;
+            pointer-events: none;
+        }
+        textarea:focus + .placeholder-textarea, textarea:not(:invalid) + .placeholder-textarea {
+            color: $color-secundary;
+            font-family: $roboto-b;
+            top: 0%;
+            margin-top: -16px;
+            background-color: $color-secundary-light;
+            padding: 4px 16px;
+        }
+    }
+    .img-raff {
+        width: 25%;
+        height: auto;
+    }
+}
+.input-button {
+    width: 100%;
+    // @include height(150px);
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0;
+}
+.btn-create {
+    @extend %button-primary;
+}
+.btn-create-secundary {
+    @extend %button-secundary;
+}
