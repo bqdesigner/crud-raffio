@@ -112,11 +112,11 @@ $roboto-l: 'Roboto-light';
 %button-secundary {
     border: 1px solid $color-context-gray;
     background-color: transparent;
-    color: $color-context-gray;
+    color: $color-context-gray !important;
     @extend %button-structure;
     &:hover {
         border-color: $color-secundary-medium;
-        color: $color-secundary-medium;
+        color: $color-secundary-medium !important;
     }
 }
 

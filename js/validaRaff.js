@@ -1,8 +1,11 @@
 // Validando o envio do Raff
 const desc = document.getElementById('desc_proj').onblur = function() {
     // e.preventDefault();
-    if (this.value.length <= 3 || this.value == '') 
+    if (this.value.length <= 3 || this.value == '') {
         alert("Ideia curta.");
+        this.classList.add('border-erro');
+    } else
+        this.classList.remove('border-erro');
 }
 
 // Inserindo o caminho da imagem dentro uma label

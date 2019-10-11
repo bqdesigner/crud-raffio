@@ -43,7 +43,7 @@
   font-size: 1.375rem;
 }
 
-.input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .meus-raffs .no-raff {
+.input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .meus-raffs .no-raff, .modal .modal-body {
   font-size: 1rem;
 }
 
@@ -51,7 +51,7 @@
   font-size: 0.75rem;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary {
+.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar {
   border-radius: 7px;
   padding: 1rem 3rem;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -63,33 +63,33 @@
   border: none;
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover {
+.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover {
   text-decoration: none;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .btn-criar-raff, .landing header a {
+.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .btn-criar-raff, .landing header a {
   background-color: #eb3107;
   color: #ffffff;
   -webkit-box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
   box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .btn-criar-raff:hover, .landing header a:hover {
+.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .btn-criar-raff:hover, .landing header a:hover {
   background-color: #d12b06;
   color: #ffffff;
   -webkit-box-shadow: 0px 11px 22px rgba(235, 49, 7, 0.1);
   box-shadow: 0px 11px 22px rgba(235, 49, 7, 0.1);
 }
 
-.btn-login-secundary, .btn-create-secundary {
+.btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar {
   border: 1px solid #bfbfbf;
   background-color: transparent;
-  color: #bfbfbf;
+  color: #bfbfbf !important;
 }
 
-.btn-login-secundary:hover, .btn-create-secundary:hover {
+.btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover {
   border-color: #767d7d;
-  color: #767d7d;
+  color: #767d7d !important;
 }
 
 .msg-danger, .msg-attention, .msg-success {
@@ -399,6 +399,7 @@
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
   padding: 10px 10px;
+  cursor: pointer;
 }
 
 .header-page .logout a:hover {
@@ -540,6 +541,10 @@
 .create-raff .img-raff {
   width: 25%;
   height: auto;
+}
+
+.border-erro {
+  border: 1px solid #eb3107 !important;
 }
 
 .input-button {
@@ -732,115 +737,35 @@
   margin-top: 2rem;
 }
 
-.modal-container {
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2000;
-  display: none;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.modal .modal-content {
+  padding: 1rem;
 }
 
-.modal {
-  min-width: 300px;
-  background-color: white;
-  padding: 40px;
-  border: 10px solid #fb5;
-  -webkit-box-shadow: 0 0 0 10px white;
-          box-shadow: 0 0 0 10px white;
-  position: relative;
-}
-
-.fechar {
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 50px;
-  height: 50px;
-  border: 4px solid white;
-  border-radius: 50%;
-  -webkit-box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-          box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.3);
-  background-color: #e54;
-  outline: none;
-  cursor: pointer;
-  font-size: 1.2rem;
-  color: white;
-  font-family: 'IBM Plex Mono', monospace;
-}
-
-.modal label {
-  font-family: 'IBM Plex Mono', monospace;
-  display: block;
-  font-weight: bold;
-  margin: 1rem 0 .5rem 0;
-}
-
-.modal input {
-  width: 100%;
-  padding: .7rem .5rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.modal button[type="submit"] {
-  display: block;
-  background-color: #e54;
+.modal .modal-content, .modal .modal-header, .modal .modal-footer {
   border: none;
-  outline: none;
-  border-radius: 4px;
-  padding: .7rem 2rem;
-  font-size: 1rem;
-  color: white;
-  font-family: 'IBM Plex Mono', monospace;
-  margin-top: 1rem;
+}
+
+.modal .modal-header {
+  font-family: "Roboto-bold";
+}
+
+.modal .modal-header .close span {
+  color: #eb3107;
+}
+
+.modal .modal-body {
+  font-family: "Roboto-regular";
+  color: #bfbfbf;
+}
+
+.modal .btn-sair {
+  padding: .5rem 1.5rem;
+}
+
+.modal .btn-cancelar {
   cursor: pointer;
-  font-weight: bold;
-}
-
-.modal-container.ativo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.ativo .modal {
-  -webkit-animation: modal .3s forwards ease-in-out;
-          animation: modal .3s forwards ease-in-out;
-}
-
-@-webkit-keyframes modal {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30px, 0);
-            transform: translate3d(0, 30px, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes modal {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 30px, 0);
-            transform: translate3d(0, 30px, 0);
-  }
-  to {
-    opacity: 1;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
+  padding: .5rem 1.5rem;
+  margin-right: 1rem;
 }
 
 .new-raff {

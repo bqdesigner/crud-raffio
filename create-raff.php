@@ -44,6 +44,7 @@ include('actions/verifica-login.php');
                 <div class="input-group">
                     <textarea id="desc_proj" name="desc_proj" required></textarea>
                     <span class="placeholder-textarea">Descreva o que você imagina! </span>
+                    <span id="msg-erro"> </span>
                 </div>
                 <h2> 4 - Referências </h2>
                 <div class="input-group">
@@ -78,6 +79,7 @@ include('actions/verifica-login.php');
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="js/validaRaff.js"></script>
 </body>
 </html>

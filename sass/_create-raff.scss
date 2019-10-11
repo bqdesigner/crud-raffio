@@ -99,6 +99,9 @@
         height: auto;
     }
 }
+.border-erro {
+    border: 1px solid $color-primary !important;
+}
 .input-button {
     width: 100%;
     // @include height(150px);

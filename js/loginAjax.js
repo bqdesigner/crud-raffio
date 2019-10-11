@@ -22,6 +22,7 @@
 			$('.msg-success').removeAttr("style");
 			$('#entrar-btn').click();
 			$('#usuario').val($('#novo-usuario').val()); 
+			$('#senha').focus();
 			}
 		}
 	});
