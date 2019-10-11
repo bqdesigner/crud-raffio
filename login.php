@@ -26,11 +26,11 @@
         <!-- Tab entrar -->
         <div class="login-entrar" data-group="entrar">
             <div class="row my-5 tab-menu ml-0">
-                <a href="#entrar"> Acesse sua conta Raff.io </a>
+                <a href="#entrar" id="entrar-btn"> Acesse sua conta Raff.io </a>
                 <a href="#criar"> Não possui conta? </a>
             </div>
             <div class="item" id="entrar" data-target="entrar">
-                <form id="formContato" class="" method="POST" action="actions/valid-login.php">
+                <form id="formContatoLogin" class="" method="POST" onsubmit="return validForm()" action="actions/valid-login.php">
                     <div class="input-group">
                         <input type="text" id="usuario" name="usuario" autocomplete="off" required>
                         <span class="placeholder">Nome de usuário</span>
@@ -42,14 +42,8 @@
                             <img src="assets/icones/icone_show.png" alt="Exibir Senha">
                         </a>
                     </div>
-                    <?php 
-                        if(isset($_SESSION['nao_autenticado'])):
-                    ?>
-                    <span class="msg-danger"> Usuário ou senha inválidos</span>
-                    <?php
-                        endif;
-                        unset($_SESSION['nao_autenticado']);
-                    ?>
+                    <span class="msg-success" style="display: none;"> Usuário cadastrado </span>
+                    <span class="msg-danger" style="display: none;"> Usuário ou senha inválidos</span>
                     <!-- <div class="checkbox-group">
                         <input type="checkbox" name="checkbox-style-1" id="checkbox-style-1" class="checkbox-style-1">
                         <label for="checkbox-style-1"> Mantenha logado </label>
@@ -57,7 +51,6 @@
                     <div class="esqueceu-senha">
                          <a href="esqueceu-senha.php"> Esqueceu sua senha? </a> 
                     </div>
-                    
                     <button id="enviar" type="submit" class="btn-login button-primary mt-5"> Entrar </button>
                 </form>
             </div>
@@ -65,7 +58,7 @@
         <!-- Tab criar conta -->        
         <div class="login-criar" data-group="criar">
             <div class="item" id="criar" data-target="criar">
-                <form id="formContatoCadastrar" class="" method="POST" action="actions/cadastrar.php">
+                <form id="formContatoCadastrar" class="" method="POST" onsubmit="return submitForm()" action="actions/cadastrar.php">
                     <div class="input-group">
                         <input type="text" id="nome" name="nome" required>
                         <span class="placeholder">Seu nome</span>
@@ -82,22 +75,10 @@
                         <input type="password" id="pass-confirm" name="pass-confirm" required>
                         <span class="placeholder">Confirmar senha</span>
                     </div> -->
-                    <?php
-                        if(isset($_SESSION['usuario_novo'])):
-                    ?>
-                    <span class="msg-success"> Usuário cadastrado </span>
-                    <?php
-                        endif;
-                        unset($_SESSION['usuario_novo']);
-                    ?>
-                    <?php
-                        if(isset($_SESSION['usuario_existe'])):
-                    ?>
-                    <span class="msg-attention"> ERRO: Usuário já existe. </span>
-                    <?php
-                        endif;
-                        unset($_SESSION['usuario_existe']);
-                    ?>
+                    
+                    
+                    <span class="msg-attention" style="display: none;"> ERRO: Usuário já existe. </span>
+
                     <button id="cadastrar" type="submit" class="btn-login mt-5"> Criar </button>
                 </form>
             </div>
@@ -113,6 +94,6 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/tab.js"></script>
     <script src="js/showPass.js"></script>
-    <!-- <script src="js/cadastroAjax.js"></script> -->
+    <script src="js/loginAjax.js"></script>
 </body>
 </html>

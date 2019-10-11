@@ -17,8 +17,8 @@
     // Verificando se o usuário já existe no momento do cadastro, redirecionando ele para o login
     if($row['usuario'] == $usuario) {
         $_SESSION['usuario_existe'] = true;
-        header('Location: ../login.php');
-        exit;
+        echo json_encode(array('error' => 'Usuário já existe'));
+        return;
     }
 
     // Caso não existe, salva o usuário no banco
@@ -29,8 +29,8 @@
     mysqli_stmt_bind_param($createUser, 'ssssi', $nome, $usuario, $senha, $date, $stateLogin);
     if (mysqli_stmt_execute($createUser)) {
         $_SESSION['usuario_novo'] = true;
-        header('Location: ../login.php');
-        exit;
+        echo true;
+        //header('Location: ../login.php');
     };
 
 ?>

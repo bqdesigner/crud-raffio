@@ -22,13 +22,17 @@ if ($row == 1) {
     $_SESSION['nome'] = $usuario_bd['nome'];
     $_SESSION['id_usuario'] = $usuario_bd['id_usuario'];
     if ($usuario_bd['first_login'])
-        header('Location: ../bem-vindo.php');
+        echo json_encode(array('redirect' => './bem-vindo.php'));    
+        //header('Location: ../bem-vindo.php');
     else 
-        header('Location: ../index.php');
+        echo json_encode(array('redirect' => './index.php'));    
+        //header('Location: ../index.php');
     exit();
 } else {
-    $_SESSION['nao_autenticado'] = true;
-    header('Location: ../login.php');
-    exit();
+    //$_SESSION['nao_autenticado'] = true;
+    
+    //header('Location: ../login.php');
+    echo json_encode(array('error' => 'Usuário Inválido'));
+    return;
 }
 

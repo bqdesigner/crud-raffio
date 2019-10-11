@@ -50,8 +50,9 @@ $id_usuario = $row_usuario['id_usuario'];
                             <li> Enviado para: <?php echo $enviado ?>  </li>
                         </ul> -->
                         <div class="links">
-                            <a href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
-                            <a href="actions/deletar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
+                            <a id="editar_raff" href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
+                            
+                            <a id="excluir_raff" href="actions/deletar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
                         </div>
                     </div>
                 <?php
@@ -71,6 +72,11 @@ $id_usuario = $row_usuario['id_usuario'];
         </main>
         <?php include "includes/footer-page.php" ?>
     </section>
+
+    <script>
+        const idRaff = document.getElementById('excluir');
+        console.log(idRaff);
+    </script>
     
 </body>
 </html>
