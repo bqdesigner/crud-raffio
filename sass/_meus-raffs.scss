@@ -64,6 +64,7 @@
             color: $color-secundary;
             text-decoration: none;
             @include transition(all 0.3s ease-in-out 0s);
+            cursor: pointer;
             &:hover {
                 color: $color-primary;
             }

@@ -52,7 +52,28 @@ $id_usuario = $row_usuario['id_usuario'];
                         <div class="links">
                             <a id="editar_raff" href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
                             
-                            <a id="excluir_raff" href="actions/deletar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
+                            <a id="excluir_raff" data-toggle="modal" data-target="#modalExcluir"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
+                        </div>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> <img src="assets/icones/icone_sair.png" class="mr-3 img-icone" alt="Sair"> Excluir Raff </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Deseja excluir o Raff <span><?php echo $raff ?></span>?
+                            </div>
+                            <div class="modal-footer">
+                                <a class="btn btn-cancelar" data-dismiss="modal"> Não </a>
+                                <a class="btn btn-sair" href="actions/deletar-raff.php?id=<?php echo $id_raff ?>"> Excluir </a>
+                            </div>
+                            </div>
+                        </div>
                         </div>
                     </div>
                 <?php
@@ -76,8 +97,9 @@ $id_usuario = $row_usuario['id_usuario'];
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        const idRaff = document.getElementById('excluir');
-        console.log(idRaff);
+        // const idRaff = document.getElementById('excluir_raff').getAttribute("href");
+        // const valueID = idRaff[idRaff.length - 1];
+        // console.log(valueID);
     </script>
     
 </body>

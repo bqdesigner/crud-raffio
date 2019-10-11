@@ -644,6 +644,7 @@
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
 }
 
 .meus-raffs .links a:hover {
@@ -755,7 +756,11 @@
 
 .modal .modal-body {
   font-family: "Roboto-regular";
-  color: #bfbfbf;
+  color: #2e3131;
+}
+
+.modal .modal-body span {
+  font-weight: bold;
 }
 
 .modal .btn-sair {

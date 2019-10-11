@@ -16,7 +16,10 @@
     .modal-body {
         font-family: $roboto-r;
         @extend %texto;
-        color: $color-context-gray;
+        color: $color-secundary;
+        span {
+            font-weight: bold;
+        }
     }
     .btn-sair {
         @extend %button-primary;

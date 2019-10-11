@@ -14,14 +14,14 @@
                 </nav> 
             </div>
             <div class="col-md-2">
-                <span class="logout"><a data-toggle="modal" data-target="#modalExemplo"> <img src="assets/icones/icone_sair.png" alt="Finalizar sessão" class="mr-3 img-icone"> Sair</a></span>
+                <span class="logout"><a data-toggle="modal" data-target="#modalSair"> <img src="assets/icones/icone_sair.png" alt="Finalizar sessão" class="mr-3 img-icone"> Sair</a></span>
             </div>
         </div>
     </div>
 </header>
 
 <!-- Modal -->
-<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalSair" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -31,7 +31,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <?php echo $_SESSION['nome']; ?>, deseja finalizar sua sessão?
+        <span><?php echo $_SESSION['nome']; ?></span>, deseja finalizar sua sessão?
       </div>
       <div class="modal-footer">
         <a class="btn btn-cancelar" data-dismiss="modal"> Não </a>
