@@ -64,7 +64,7 @@ include('actions/verifica-login.php');
                 </div>
                 <h2> 7 - Finalizando o seu Raff </h2>
                 <div class="input-group">
-                    <input type="email" id="email_proj" name="email_proj" required autocomplete="off">
+                    <input type="text" id="email_proj" name="email_proj" required autocomplete="off">
                     <span class="placeholder">E-mail para quem deseja enviar</span>
                 </div>
                 <div class="input-button">
