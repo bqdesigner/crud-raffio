@@ -47,7 +47,7 @@
   font-size: 1rem;
 }
 
-.esqueceu-senha, .checkbox-style-1 + label, .footer-login span, .footer-page span, .meus-raffs ul, .meus-raffs .links {
+.esqueceu-senha, .msgErro, .checkbox-style-1 + label, .footer-login span, .footer-page span, .meus-raffs ul, .meus-raffs .links {
   font-size: 0.75rem;
 }
 
@@ -269,6 +269,11 @@
 .msgErro {
   width: 100%;
   display: inline-block;
+  margin-bottom: .5rem;
+  font-family: "Roboto-bold";
+  color: #eb3107;
+  position: relative;
+  top: -1rem;
 }
 
 .checkbox-style-1 {

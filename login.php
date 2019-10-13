@@ -64,19 +64,22 @@
                         <input type="text" id="nome" name="nome" required autocomplete="off"> 
                         <span class="placeholder">Seu nome</span>
                     </div>
+                    <div id="msgErro"></div>
                     <div class="input-group">
                         <input type="text" id="novo-usuario" name="novo-usuario" required autocomplete="off">
                         <span class="placeholder">Usuário</span>
                     </div>
+                    <div id="msgErro"></div>
                     <div class="input-group">
                         <input type="text" id="novo-email" name="novo-email" required autocomplete="off">
                         <span class="placeholder">E-mail</span>
                     </div>
-                    <div class="msgErro"></div>
+                    <div id="msgErro"></div>
                     <div class="input-group">
                         <input type="password" id="nova-senha" name="nova-senha" required>
                         <span class="placeholder">Senha</span>
                     </div>
+                    <div id="msgErro"></div>
                     <!-- <div class="input-group">
                         <input type="password" id="pass-confirm" name="pass-confirm" required>
                         <span class="placeholder">Confirmar senha</span>
