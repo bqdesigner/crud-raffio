@@ -9,9 +9,10 @@
     // Pegando os dados do profile
     $novoNome = $_POST['nome'];
     $novoUsuario = $_POST['usuario'];
+    $novoEmail = $_POST['email'];
 
     // Atualizando os dados do usuário
-    $sql = "UPDATE usuarios SET nome = '{$novoNome}', usuario = '{$novoUsuario}', data_modificado = NOW() WHERE id_usuario = '{$id_usuario }'";
+    $sql = "UPDATE usuarios SET nome = '{$novoNome}', usuario = '{$novoUsuario}', email = '{$novoEmail}', data_modificado = NOW() WHERE id_usuario = '{$id_usuario }'";
     $att_usuario = mysqli_query($conexao, $sql);
 
     $_SESSION['nome'] = $novoNome;

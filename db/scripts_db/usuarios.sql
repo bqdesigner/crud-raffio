@@ -6,6 +6,7 @@ CREATE TABLE usuarios (
   usuario VARCHAR(200) NOT NULL,
   senha VARCHAR(32) NOT NULL,
   nome VARCHAR(100) NOT NULL,
+  email varchar(100) unique not null,
   data_cadastro DATETIME NULL,
   data_modificado DATETIME NULL,
   first_login TINYINT NOT NULL,

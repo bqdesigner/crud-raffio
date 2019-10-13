@@ -36,6 +36,11 @@
             margin-right: 2rem;
         }
     }
+    #texto-login-criar {
+        font-family: $roboto-r;
+        @extend %texto;
+        color: $color-secundary;
+    }
 }
 // Itens TAB
 .item {
@@ -113,6 +118,10 @@
         }
     }
 }
+.msgErro {
+    width: 100%;
+    display: inline-block;
+}
 .btn-login {
     @extend %button-primary;
 }
@@ -170,22 +179,6 @@
         transform: rotate(45deg);
       }
 }
-.msg-danger {
-    @extend %msg-danger;
-    width: 558px;
-    margin: 1.5rem 0;
-}
-.msg-attention {
-    @extend %msg-attention;
-    width: 558px;
-    margin: 1.5rem 0;
-}
-.msg-success {
-    @extend %msg-success;
-    width: 558px;
-    margin: 1.5rem 0;
-}
-
 .footer-login {
     width: 80%;
     position: absolute;

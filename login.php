@@ -58,15 +58,21 @@
         <!-- Tab criar conta -->        
         <div class="login-criar" data-group="criar">
             <div class="item" id="criar" data-target="criar">
+                <p id="texto-login-criar"> Para usar o Raff.io crie a sua conta preenchendo os campos abaixo: </p>
                 <form id="formContatoCadastrar" class="" method="POST" onsubmit="return submitForm()" action="actions/cadastrar.php">
                     <div class="input-group">
-                        <input type="text" id="nome" name="nome" required>
+                        <input type="text" id="nome" name="nome" required autocomplete="off"> 
                         <span class="placeholder">Seu nome</span>
                     </div>
                     <div class="input-group">
-                        <input type="text" id="novo-usuario" name="novo-usuario"required>
+                        <input type="text" id="novo-usuario" name="novo-usuario" required autocomplete="off">
                         <span class="placeholder">Usuário</span>
                     </div>
+                    <div class="input-group">
+                        <input type="text" id="novo-email" name="novo-email" required autocomplete="off">
+                        <span class="placeholder">E-mail</span>
+                    </div>
+                    <div class="msgErro"></div>
                     <div class="input-group">
                         <input type="password" id="nova-senha" name="nova-senha" required>
                         <span class="placeholder">Senha</span>
@@ -77,7 +83,7 @@
                     </div> -->
                     
                     
-                    <span class="msg-attention" style="display: none;"> ERRO: Usuário já existe. </span>
+                    <span class="msg-attention" style="display: none;"> ERRO: Usuário ou E-mail já existe. </span>
 
                     <button id="cadastrar" type="submit" class="btn-login mt-5"> Criar </button>
                 </form>
@@ -94,6 +100,6 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="js/tab.js"></script>
     <script src="js/showPass.js"></script>
-    <script src="js/loginAjax.js"></script>
+    <script src="js/login.js"></script>
 </body>
 </html>

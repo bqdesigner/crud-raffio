@@ -43,7 +43,7 @@
   font-size: 1.375rem;
 }
 
-.input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .meus-raffs .no-raff, .modal .modal-body {
+.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .meus-raffs .no-raff, .modal .modal-body {
   font-size: 1rem;
 }
 
@@ -173,6 +173,11 @@
   margin-right: 2rem;
 }
 
+.lado-dir #texto-login-criar {
+  font-family: "Roboto-regular";
+  color: #2e3131;
+}
+
 .item {
   opacity: 0;
   visibility: hidden;
@@ -261,6 +266,11 @@
   color: #eb3107;
 }
 
+.msgErro {
+  width: 100%;
+  display: inline-block;
+}
+
 .checkbox-style-1 {
   position: absolute;
   opacity: 0;
@@ -311,21 +321,6 @@
           box-shadow: 2px 0 0 #33f008, 4px 0 0 #33f008, 4px -2px 0 #33f008, 4px -4px 0 #33f008, 4px -6px 0 #33f008, 4px -8px 0 #33f008;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
-}
-
-.msg-danger {
-  width: 558px;
-  margin: 1.5rem 0;
-}
-
-.msg-attention {
-  width: 558px;
-  margin: 1.5rem 0;
-}
-
-.msg-success {
-  width: 558px;
-  margin: 1.5rem 0;
 }
 
 .footer-login {
@@ -677,7 +672,7 @@
 
 .perfil {
   width: 100%;
-  min-height: 700px;
+  margin-bottom: 3rem;
 }
 
 .perfil .photo-profile {
@@ -734,8 +729,26 @@
   color: #2e3131;
 }
 
+.perfil input[type=text]:disabled, .perfil input[type=password]:disabled {
+  border: 1px solid #bfbfbf;
+  color: #bfbfbf;
+}
+
 .perfil input[type=submit] {
   margin-top: 2rem;
+}
+
+.perfil a {
+  cursor: pointer;
+}
+
+.perfil .info-perfil {
+  border-bottom: 1px solid rgba(191, 191, 191, 0.2);
+  padding-bottom: 3rem !important;
+}
+
+.perfil .info-conta {
+  padding-top: 3rem !important;
 }
 
 .modal .modal-content {
@@ -820,6 +833,21 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.msg-danger {
+  width: 558px;
+  margin: 1.5rem 0;
+}
+
+.msg-attention {
+  width: 558px;
+  margin: 1.5rem 0;
+}
+
+.msg-success {
+  width: 558px;
+  margin: 1.5rem 0;
 }
 
 .landing header {

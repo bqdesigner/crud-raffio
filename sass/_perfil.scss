@@ -1,6 +1,7 @@
 .perfil {
     width: 100%;
-    min-height: 700px;
+    margin-bottom: 3rem;
+    // min-height: 700px;
     .photo-profile {
         @include width(150px);
         @include height(150px);
@@ -44,8 +45,23 @@
             color: $color-secundary;
         }
     }
+    input[type=text]:disabled, input[type=password]:disabled {
+        border: 1px solid $color-context-gray;
+        color: $color-context-gray;
+    }
     input[type=submit] {
         margin-top: 2rem;
         @extend %button-primary;
+    }
+    a {
+        cursor: pointer;
+    }
+    .info-perfil {
+        border-bottom: 1px solid rgba($color-context-gray, .2);
+        padding-bottom: 3rem !important;
+    }
+    .info-conta {
+        // border-bottom: 1px solid $color-context-gray;
+        padding-top: 3rem !important;
     }
 }

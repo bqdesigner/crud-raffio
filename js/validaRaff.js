@@ -38,3 +38,17 @@ const inputEmail = document.getElementById('email_proj').onblur = function() {
         return false;
     }
 };
+
+// function validaEmail(inputEmail) {
+//     const expression = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+//     const regex = new RegExp(expression);
+//     const inputEmailValue = document.getElementById(inputEmail).value;
+//     if (!inputEmailValue.match(regex)) {
+//         alert("E-mail inválido");
+//         return false;
+//     }
+//     return true;
+// };
+
+// const input = document.getElementById('email_proj');
+// input.addEventListener('blur', validaEmail(input));
