@@ -7,9 +7,10 @@
             <div class="col-md-7" class="mt-0 pt-0">
                 <nav>
                     <ul>
-                        <li> <a href="index.php"> Dashboard </a> </li>
+                        <li> <a href="index.php"> Início </a> </li>
+                        <li> <a href="dashboard.php"> Dashboard </a> </li>
                         <li> <a href="meus-raffs.php"> Meus Raffs </a> </li>
-                        <li> <a href="profile.php"> Perfil </a> </li>
+                        <li> <a href="perfil.php"> Perfil </a> </li>
                     </ul>
                 </nav> 
             </div>
@@ -22,7 +23,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="modalSair" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="exampleModalLabel"> <img src="assets/icones/icone_sair.png" class="mr-3 img-icone" alt="Sair"> Finalizar sessão </h5>

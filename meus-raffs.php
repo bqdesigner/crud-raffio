@@ -40,25 +40,59 @@ $id_usuario = $row_usuario['id_usuario'];
                         $id_raff = $array['id_raff'];
                         $raff = $array['nome_projeto'];
                         $categ = $array['categ_projeto'];
+                        $ideia = $array['ideia'];
+                        $ref = $array['ref'];
+                        $imagem = $array['upload'];
+                        $consideracoes = $array['consideracao'];
+                        $email_enviado = $array['finalizar_raff'];
+                        $data_criacao_raff = $array['data_criacao'];
                         $enviado = $array['finalizar_raff'];                   
 
                 ?>
-                    <div class="raff">
+                <div class="raff">
+                    <a data-toggle="modal" data-target="#modalInfoRaff">
                         <h2> <?php echo $raff ?> </h2>
-                        <!-- <ul>
-                            <li> Categoria: <?php echo $categ ?> </li>
-                            <li> Enviado para: <?php echo $enviado ?>  </li>
-                        </ul> -->
-                        <div class="links">
-                            <a id="editar_raff" href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
-                            
-                            <a id="excluir_raff" data-toggle="modal" data-target="#modalExcluir"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
-                        </div>
+                    </a>
+                    <!-- <ul>
+                        <li> Categoria: <?php echo $categ ?> </li>
+                        <li> Enviado para: <?php echo $enviado ?>  </li>
+                    </ul> -->
+                    <div class="links">
+                        <a id="editar_raff" href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
+                        
+                        <a id="excluir_raff" data-toggle="modal" data-target="#modalExcluir"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
+                    </div>
+                </div>
 
-                        <!-- Modal -->
-                        <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+                <!-- Modal detalhes raff -->
+                <div class="modal modal-raff fade" id="modalInfoRaff" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel"> <img src="assets/icones/icone_form.png" class="mr-3 img-icone" alt="Raff <?php echo $raff ?>"> <span><?php echo $raff ?></span> </h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                                <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-12">
+                                        Raff criado por <span><?php echo $_SESSION['nome'] ?></span> em <span><?php echo $data_criacao_raff ?> </span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                    
+                <!-- Modal excluir -->
+                <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel"> <img src="assets/icones/icone_sair.png" class="mr-3 img-icone" alt="Sair"> Excluir Raff </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
@@ -72,10 +106,10 @@ $id_usuario = $row_usuario['id_usuario'];
                                 <a class="btn btn-cancelar" data-dismiss="modal"> Não </a>
                                 <a class="btn btn-sair" href="actions/deletar-raff.php?id=<?php echo $id_raff ?>"> Excluir </a>
                             </div>
-                            </div>
-                        </div>
                         </div>
                     </div>
+                </div>
+
                 <?php
                     }
                 } else { ?>

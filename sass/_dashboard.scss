@@ -1,0 +1,14 @@
+.dashboard {
+    width: 100%;
+    // display: flex;
+    // align-items: center;
+    // flex-direction: column; 
+    // justify-content: center;
+    min-height: 800px;
+    h1 {
+        @extend %titulo-create-raff;
+        font-family: $roboto-b;
+        color: $color-secundary;
+        margin-bottom: 3rem;
+    }
+}

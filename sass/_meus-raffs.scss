@@ -7,6 +7,10 @@
         color: $color-secundary;
         margin-bottom: 3rem;
     }
+    a {
+        text-decoration: none;
+        cursor: pointer;
+    }
     .raff {
         @include width(260px);
         @include height(300px);

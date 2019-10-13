@@ -6,7 +6,7 @@ O nosso projeto se chama **Raff.io**, um sistema simples para criação de propo
 ## Autores do projeto
 
 - [Bruno Queirós](https://github.com/bqdesigner)
-- [Rodrigo Avelino](https://github.com/rgavelino)
+- [Rodrigo Avelino](https://github.com/rgavelino83)
 
 ---
 

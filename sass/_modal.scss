@@ -32,3 +32,16 @@
         margin-right: 1rem;
     }
 }
+
+// Modal Raff
+.modal-raff {
+    .modal-dialog {
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .modal-content {
+        width: 700px;
+    }
+}
