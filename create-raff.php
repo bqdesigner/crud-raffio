@@ -29,6 +29,7 @@ include('actions/verifica-login.php');
                     <input type="text" id="nome_raff_proj" name="nome_raff_proj" required autocomplete="off">
                     <span class="placeholder">Ex: Criação logo</span>
                 </div>
+                <div id="msgErro"></div>
                 <h2> 2 - Em qual categoria está o seu Raff? </h2>
                 <div class="input-group">
                 <select class="categ" name="categ_proj">
@@ -46,11 +47,13 @@ include('actions/verifica-login.php');
                     <span class="placeholder-textarea">Descreva o que você imagina! </span>
                     <span id="msg-erro"> </span>
                 </div>
+                <div id="msgErro"></div>
                 <h2> 4 - Referências </h2>
                 <div class="input-group">
                     <input type="text" id="ref_proj" name="ref_proj" required autocomplete="off">
                     <span class="placeholder">Links de referência</span>
                 </div>
+                <div id="msgErro"></div>
                 <h2> 5 - Uploads </h2>
                 <div class="input-group">
                 <input type="file" name="imagem_proj" id="imagem_proj" />
@@ -62,11 +65,13 @@ include('actions/verifica-login.php');
                     <textarea id="desc_consideracao_proj" name="desc_consideracao_proj" required></textarea>
                     <span class="placeholder-textarea">Dicas e o que você espera </span>
                 </div>
+                <div id="msgErro"></div>
                 <h2> 7 - Finalizando o seu Raff </h2>
                 <div class="input-group">
                     <input type="text" id="email_proj" name="email_proj" required autocomplete="off">
                     <span class="placeholder">E-mail para quem deseja enviar</span>
                 </div>
+                <div id="msgErro"></div>
                 <div class="input-button">
                     <button id="enviar" type="submit" name="enviar" class="btn-create button-primary mt-5"> Criar </button>
                     <a id="cancelar" href="index.php" class="btn-create-secundary button-primary mt-5"> Cancelar </a>
@@ -75,6 +80,9 @@ include('actions/verifica-login.php');
         </div>
         <?php include "includes/footer-page.php" ?>
     </section>
+    <!-- <section class="progress-raff">
+        <h3> Acompanhe o progresso do seu Raff </h3>
+    </section> -->
    
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="

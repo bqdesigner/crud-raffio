@@ -43,7 +43,7 @@
   font-size: 1.375rem;
 }
 
-.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .meus-raffs .no-raff, .modal .modal-body {
+.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .progress-raff h3, .meus-raffs .no-raff, .modal .modal-body {
   font-size: 1rem;
 }
 
@@ -556,6 +556,36 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 3rem 0;
+}
+
+.progress-raff {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 90%;
+  height: 9.375rem;
+  background-color: #ffffff;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 11px 22px rgba(46, 49, 49, 0.15);
+  box-shadow: 0px 11px 22px rgba(46, 49, 49, 0.15);
+  bottom: 0;
+  margin-bottom: 2rem;
+}
+
+.progress-raff h3 {
+  font-family: "Roboto-bold";
+  color: #2e3131;
 }
 
 .meus-raffs {

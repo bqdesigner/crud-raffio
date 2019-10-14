@@ -115,3 +115,24 @@
 .btn-create-secundary {
     @extend %button-secundary;
 }
+.progress-raff {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    width: 90%;
+    // @include width(700px);
+    @include height(150px);
+    background-color: $default-color-1;
+    border-radius: 7px;
+    @include box-shadow(0px 11px 22px rgba($color-secundary, 0.15));
+    bottom: 0;
+    // left: 30%;
+    margin-bottom: 2rem;
+    h3 {
+        font-family: $roboto-b;
+        color: $color-secundary;
+        @extend %texto;
+    }
+}

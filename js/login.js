@@ -60,10 +60,10 @@ const allMsgErro = document.querySelectorAll('#msgErro');
 
 // Validando nome
 const inputNome = document.getElementById('nome').onblur = function() {
-	const expression =/[A-Z][a-z]* [A-Z][a-z]*/;
+	const expression = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/;
 	const regex = new RegExp(expression);
-	const inputNomeValue = document.getElementById('nome').value;
-	if (!inputNomeValue.match(regex)) { 
+	const inputNomeValue = this.value;
+	if (!inputNomeValue.match(regex) || inputNomeValue < 3) { 
 		allMsgErro[0].innerText = "Nome inválido. Insira um novo nome.";
 		allMsgErro[0].classList.add('msgErro');
 		this.classList.add('border-erro');
@@ -95,7 +95,7 @@ const inputUsuario = document.getElementById('novo-usuario').onblur = function()
 const inputEmail = document.getElementById('novo-email').onblur = function() {
     const expression = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const regex = new RegExp(expression);
-    const inputEmailValue = document.getElementById('novo-email').value;
+    const inputEmailValue = this.value;
     if (!inputEmailValue.match(regex)) { 
 		allMsgErro[2].innerText = "E-mail inválido. Insira um novo e-mail.";
 		allMsgErro[2].classList.add('msgErro');
