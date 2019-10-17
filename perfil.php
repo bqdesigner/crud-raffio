@@ -65,15 +65,29 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
 
-        const cancelar = document.getElementById('cancelar');
-        cancelar.addEventListener('click', function(){
+        const func_cancelar = function(){
+            const inputs = document.querySelectorAll('input[type=text]');
+            for (var i = 0; i < inputs.length; i += 1) {
+                inputs[i].setAttribute('disabled', '');
+            }
+            this.innerText = "Editar";
+            this.removeEventListener('click', func_cancelar);
+            this.addEventListener('click', func_editar);
+        };
+
+        const func_editar = function(){
             const inputs = document.querySelectorAll('input[type=text]');
             for (var i = 0; i < inputs.length; i += 1) {
                 inputs[i].removeAttribute('disabled');
             }
-            cancelar.innerText = "Cancelar";
-            cancelar.id = "editar";
-        });
+            this.innerText = "Cancelar";
+            this.removeEventListener('click', func_editar);
+            this.addEventListener('click', func_cancelar);
+        };
+
+
+        const btn_editar = document.getElementById('cancelar');
+        btn_editar.addEventListener('click', func_editar);
 
         // function editarPerfil() {
         //     const cancelar = document.getElementById('cancelar');

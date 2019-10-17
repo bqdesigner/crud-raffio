@@ -1,5 +1,5 @@
 <?php
-session_start(); 
+session_start();
 include_once('actions/verifica-login.php');
 include_once('actions/connection.php');
 
@@ -31,11 +31,11 @@ $id_usuario = $row_usuario['id_usuario'];
             <h1> Meus Raffs </h1>
             <div class="row">
                 <?php
-                    $sql = "SELECT * FROM novo_raff where id_usuario = '{$id_usuario}'";
-                    $buscaRaff = mysqli_query($conexao, $sql);
-                    $row = mysqli_num_rows($buscaRaff);
-                    if ($row != 0) {
-                        while ($array = mysqli_fetch_array($buscaRaff)) {
+                $sql = "SELECT * FROM novo_raff where id_usuario = '{$id_usuario}'";
+                $buscaRaff = mysqli_query($conexao, $sql);
+                $row = mysqli_num_rows($buscaRaff);
+                if ($row != 0) {
+                    while ($array = mysqli_fetch_array($buscaRaff)) {
                         $id_busca_usuario = $array['id_usuario'];
                         $id_raff = $array['id_raff'];
                         $raff = $array['nome_projeto'];
@@ -46,9 +46,9 @@ $id_usuario = $row_usuario['id_usuario'];
                         $consideracoes = $array['consideracao'];
                         $email_enviado = $array['finalizar_raff'];
                         $data_criacao_raff = $array['data_criacao'];
-                        $enviado = $array['finalizar_raff'];                   
+                        $enviado = $array['finalizar_raff'];
 
-                ?>
+                        ?>
                 <div class="raff">
                     <a data-toggle="modal" data-target="#modalInfoRaff">
                         <h2> <?php echo $raff ?> </h2>
@@ -60,7 +60,7 @@ $id_usuario = $row_usuario['id_usuario'];
                     <div class="links">
                         <a id="editar_raff" href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
                         
-                        <a id="excluir_raff" data-toggle="modal" data-target="#modalExcluir"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
+                        <a id="excluir_raff" class="excluir_raff" data-toggle="modal" data-target="#modalExcluir" data-id="<?php echo $id_raff ?>"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
                     </div>
                 </div>
 
@@ -88,9 +88,27 @@ $id_usuario = $row_usuario['id_usuario'];
                         </div>
                     </div>
                 </div>
-                    
-                <!-- Modal excluir -->
-                <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                <?php
+
+            }
+        } else { ?>
+                    <div class="no-raff">
+                        <p> Você não tem nenhum Raff criado. </p>
+                        <img src="assets/svg/ilustra_meus_raffs.svg" alt="">
+                    </div>
+                <?php
+
+            }
+            ?>
+            </div>
+            <div class="row cta-criar-raff my-5 py-5">
+                <a href="create-raff.php" class="btn-criar-raff"> <img src="assets/icones/icone_adicionar_branco.png" alt="Novo Raff" class="mr-3 img-icone"> Criar raff</a>
+            </div>
+        </main>
+        <aside>
+          <!-- Modal excluir -->
+          <div class="modal fade" id="modalExcluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -100,40 +118,30 @@ $id_usuario = $row_usuario['id_usuario'];
                                 </button>
                             </div>
                             <div class="modal-body">
-                                Deseja excluir o Raff <span><?php echo $raff ?></span>?
+                                Deseja excluir o Raff <span id="excluir_titulo"></span>?
                             </div>
                             <div class="modal-footer">
                                 <a class="btn btn-cancelar" data-dismiss="modal"> Não </a>
-                                <a class="btn btn-sair" href="actions/deletar-raff.php?id=<?php echo $id_raff ?>"> Excluir </a>
+                                <a class="btn btn-sair" href=""> Excluir </a>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <?php
-                    }
-                } else { ?>
-                    <div class="no-raff">
-                        <p> Você não tem nenhum Raff criado. </p>
-                        <img src="assets/svg/ilustra_meus_raffs.svg" alt="">
-                    </div>
-                <?php
-                }
-                ?>
-            </div>
-            <div class="row cta-criar-raff my-5 py-5">
-                <a href="create-raff.php" class="btn-criar-raff"> <img src="assets/icones/icone_adicionar_branco.png" alt="Novo Raff" class="mr-3 img-icone"> Criar raff</a>
-            </div>
-        </main>
+        </aside>
         <?php include "includes/footer-page.php" ?>
     </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script>
-        // const idRaff = document.getElementById('excluir_raff').getAttribute("href");
-        // const valueID = idRaff[idRaff.length - 1];
-        // console.log(valueID);
+        // Modal ao excluir Raff 
+        $('.excluir_raff').click(function(){
+            let titulo = $(this).parents().parents().children('a').children("h2").html().trim();
+            let id = $(this).attr("data-id");
+            let $modal_excluir = $('#modalExcluir');
+            $modal_excluir.find("#excluir_titulo").html(titulo);
+            $modal_excluir.find(".btn-sair").attr("href", 'actions/deletar-raff.php?id='+id);
+        });
     </script>
     
 </body>

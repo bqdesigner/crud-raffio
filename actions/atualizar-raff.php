@@ -22,7 +22,7 @@ $consideracao = $_POST['desc_consideracao_proj'];
 $finalizar_raff = $_POST['email_proj'];
 
 // Atualizando os valores
-$sql = "UPDATE novo_raff SET nome_projeto = '{$nome_raff}', categ_projeto = '{$categ_raff}', ideia = '{$desc_ideia}', ref = '{$ref}', upload = '{$upload}', consideracao = '{$consideracao}', finalizar_raff = '{$finalizar_raff}'  where id_raff = '{$id_raff}'";
+$sql = "UPDATE novo_raff SET nome_projeto = '{$nome_raff}', categ_projeto = '{$categ_raff}', ideia = '{$desc_ideia}', ref = '{$ref}', /* upload = '{$upload}',*/ consideracao = '{$consideracao}', finalizar_raff = '{$finalizar_raff}'  where id_raff = '{$id_raff}'";
 
 $atualizarRaff = mysqli_query($conexao, $sql);
 
