@@ -1,0 +1,37 @@
+.criado-com-sucesso{
+    width: 100%;
+    @include height(500px);
+    // background-color: azure;
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    h2 {
+        font-family: $roboto-b;
+        @include fontSize(30px);
+        margin-bottom: 2rem;
+        &:first-child {
+            margin-top: 10rem;
+        }
+        span{
+            font-style: italic;
+        }
+    }
+    p {
+        font-family: $roboto-r;
+        color: $color-context-gray;
+        @extend %texto;
+        margin-bottom: 3rem;
+    }
+    .botoes {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .btn-meus-raffs {
+        @extend %button-primary;
+    }
+    .btn-meus-raffs-secundary {
+        @extend %button-secundary;
+    }
+}
