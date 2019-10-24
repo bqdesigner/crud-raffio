@@ -142,6 +142,10 @@ $id_usuario = $row_usuario['id_usuario'];
             $modal_excluir.find("#excluir_titulo").html(titulo);
             $modal_excluir.find(".btn-sair").attr("href", 'actions/deletar-raff.php?id='+id);
         });
+
+        // Modal ao Exibir o Raff
+        
+
     </script>
     
 </body>

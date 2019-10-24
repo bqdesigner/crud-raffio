@@ -80,9 +80,10 @@ include('actions/verifica-login.php');
         </div>
         <?php include "includes/footer-page.php" ?>
     </section>
-    <!-- <section class="progress-raff">
+    <section class="progress-raff">
         <h3> Acompanhe o progresso do seu Raff </h3>
-    </section> -->
+        <div class="update-raff"></div>
+    </section>
    
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
