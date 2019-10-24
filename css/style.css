@@ -43,7 +43,7 @@
   font-size: 1.375rem;
 }
 
-.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .progress-raff h3, .meus-raffs .no-raff, .modal .modal-body {
+.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .progress-raff h3, .meus-raffs .no-raff, .modal .modal-body, .criado-com-sucesso p {
   font-size: 1rem;
 }
 
@@ -51,7 +51,7 @@
   font-size: 0.75rem;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar {
+.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar, .criado-com-sucesso .btn-meus-raffs-secundary {
   border-radius: 7px;
   padding: 1rem 3rem;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -63,31 +63,31 @@
   border: none;
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover {
+.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover, .criado-com-sucesso .btn-meus-raffs-secundary:hover {
   text-decoration: none;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .btn-criar-raff, .landing header a {
+.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .btn-criar-raff, .landing header a {
   background-color: #eb3107;
   color: #ffffff;
   -webkit-box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
   box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .btn-criar-raff:hover, .landing header a:hover {
+.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .btn-criar-raff:hover, .landing header a:hover {
   background-color: #d12b06;
   color: #ffffff;
   -webkit-box-shadow: 0px 11px 22px rgba(235, 49, 7, 0.1);
   box-shadow: 0px 11px 22px rgba(235, 49, 7, 0.1);
 }
 
-.btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar {
+.btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar, .criado-com-sucesso .btn-meus-raffs-secundary {
   border: 1px solid #bfbfbf;
   background-color: transparent;
   color: #bfbfbf !important;
 }
 
-.btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover {
+.btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover, .criado-com-sucesso .btn-meus-raffs-secundary:hover {
   border-color: #767d7d;
   color: #767d7d !important;
 }
@@ -855,6 +855,54 @@
   font-family: "Roboto-bold";
   color: #2e3131;
   margin-bottom: 3rem;
+}
+
+.criado-com-sucesso {
+  width: 100%;
+  height: 31.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.criado-com-sucesso h2 {
+  font-family: "Roboto-bold";
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+}
+
+.criado-com-sucesso h2:first-child {
+  margin-top: 10rem;
+}
+
+.criado-com-sucesso h2 span {
+  font-style: italic;
+}
+
+.criado-com-sucesso p {
+  font-family: "Roboto-regular";
+  color: #bfbfbf;
+  margin-bottom: 3rem;
+}
+
+.criado-com-sucesso .botoes {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .new-raff {
