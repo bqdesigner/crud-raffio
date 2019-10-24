@@ -55,6 +55,7 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
                 </div>
                 <div class="col-12 col-md-8"> 
                     <h2> Conta </h2>
+                    <!-- <a href="javascript:;" class="btn-create-terciary button-primary mr-5"> Inativar conta </a> -->
                 </div>
             </div>
         </main>

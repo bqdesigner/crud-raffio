@@ -17,14 +17,14 @@ const desc = document.getElementById('desc_proj').onblur = function() {
         allMsgErro[1].innerText = "Descrição inválida ou muito curta.";
 		allMsgErro[1].classList.add('msgErro');
         this.classList.add('border-erro');
-        $(".update-raff").animate({width: "-=10px"}, 650); 
+        $(".update-raff").animate({width: "-=100px"}, 650); 
         return false;
     } 
     else
         allMsgErro[1].innerText = "";
         allMsgErro[1].classList.remove('msgErro');
         this.classList.remove('border-erro');
-        $(".update-raff").animate({width: "+=10px"}, 650);  
+        $(".update-raff").animate({width: "+=100px"}, 650);  
         return true;
 }
 
@@ -38,14 +38,14 @@ inputRef.onblur = function() {
 		allMsgErro[2].innerText = "Link inválido. Insira uma nova URL.";
 		allMsgErro[2].classList.add('msgErro');
         this.classList.add('border-erro'); 
-        $(".update-raff").animate({width: "-=10px"}, 650); 
+        $(".update-raff").animate({width: "-=100px"}, 650); 
         console.log("coloca 10 ref");
         return false;
     } else {
 		allMsgErro[2].innerText = "";
 		allMsgErro[2].classList.remove('msgErro');
         this.classList.remove('border-erro');
-        $(".update-raff").animate({width: "+=10px"}, 650); 
+        $(".update-raff").animate({width: "+=100px"}, 650); 
         console.log("coloca 10 ref"); 
 		return true;
 	}

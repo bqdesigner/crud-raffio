@@ -563,17 +563,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 70%;
+  padding: 1.5rem;
   height: 6.25rem;
   background-color: #ffffff;
   border-radius: 7px;
@@ -587,12 +582,14 @@
 .progress-raff h3 {
   font-family: "Roboto-bold";
   color: #2e3131;
+  text-align: center;
 }
 
 .progress-raff .update-raff {
   width: 0;
-  height: 1.5rem;
+  height: 1rem;
   background-color: #eb3107;
+  border-radius: 1rem;
 }
 
 .meus-raffs {

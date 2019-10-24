@@ -118,11 +118,11 @@
 .progress-raff {
     position: fixed;
     display: flex;
-    align-items: center;
+    // align-items: center;
     flex-direction: column; 
-    justify-content: center;
+    // justify-content: center;
     width: 70%;
-    // @include width(700px);
+    padding: 1.5rem;
     @include height(100px);
     background-color: $default-color-1;
     border-radius: 7px;
@@ -134,10 +134,12 @@
         font-family: $roboto-b;
         color: $color-secundary;
         @extend %texto;
+        text-align: center;
     }
     .update-raff {
         width: 0;
-        @include height(24px);
+        @include height(16px);
         background-color: $color-primary;
+        border-radius: 1rem;
     }
 }
