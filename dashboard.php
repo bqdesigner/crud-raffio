@@ -34,10 +34,10 @@ $id_usuario = $row_usuario['id_usuario'];
                 <div class="col-3">
                     <h3> Total de Raffs criados </h3>
                     <?php
-                        $sql = "SELECT * from novo_raff where id_usuario = '{$id_usuario}'";
+                        $sql = "SELECT count(*) as count_raff from novo_raff where id_usuario = '{$id_usuario}'";
                         $buscar = mysqli_query($conexao, $sql);
                         while ($infoRaff = mysqli_fetch_object($buscar)) {
-                            $totalRaff = $infoRaff->id_raff;
+                            $totalRaff = $infoRaff->count_raff;
     
                     ?>
                     <span> <?php echo $totalRaff ?> </span>
