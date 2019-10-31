@@ -2,6 +2,15 @@
 session_start(); 
 
 include('actions/verifica-login.php');
+include_once('actions/connection.php');
+
+// Pegando o ID do usuário
+$id_usuario = $_SESSION['id_usuario'];
+$info_usuario = "SELECT * FROM usuarios where id_usuario = '{$id_usuario}'";
+$resultado_usuario = mysqli_query($conexao, $info_usuario);
+$row_usuario = mysqli_fetch_assoc($resultado_usuario);
+$id_usuario = $row_usuario['id_usuario'];
+
 ?>
 
 <!DOCTYPE html>
@@ -21,6 +30,22 @@ include('actions/verifica-login.php');
         <?php include "includes/header-page.php" ?>
         <main class="dashboard container mt-5 pt-5">
             <h1> Tudo sobre a sua conta! </h1>
+            <div class="row">
+                <div class="col-3">
+                    <h3> Total de Raffs criados </h3>
+                    <?php
+                        $sql = "SELECT * from novo_raff where id_usuario = '{$id_usuario}'";
+                        $buscar = mysqli_query($conexao, $sql);
+                        while ($infoRaff = mysqli_fetch_object($buscar)) {
+                            $totalRaff = $infoRaff->id_raff;
+    
+                    ?>
+                    <span> <?php echo $totalRaff ?> </span>
+                    <?php
+                    }
+                    ?>
+                </div>
+            </div>
         </main>
         <?php include "includes/footer-page.php" ?>
     </section>

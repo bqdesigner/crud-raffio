@@ -1,11 +1,12 @@
 .criado-com-sucesso{
     width: 100%;
     @include height(500px);
-    // background-color: azure;
+    background-color: azure;
     display: flex;
     align-items: center;
     flex-direction: column; 
     justify-content: center;
+    margin-top: 5rem;
     h2 {
         font-family: $roboto-b;
         @include fontSize(30px);

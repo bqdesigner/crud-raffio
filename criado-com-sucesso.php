@@ -21,29 +21,20 @@ include_once('actions/connection.php');
 </head>
 <body>
     
-<section class="criado-com-sucesso container">
-        <img src="assets/svg/icone_conta_ativada.svg" alt="">
+    <section class="container">
+        <div class="criado-com-sucesso">
+            <img src="assets/svg/icone_conta_ativada.svg" alt="">
+
+            <h2> O Raff, <span><!--<?php echo $_SESSION['raff-criado'] ?>--></span>, foi criado com sucesso! </h2>
+            
+            <p>Caso precise alterar informações ou adicionar pessoas,você pode clicar em Meus Raffs.</p>
         
-        
-        <h2> O Raff, <span><?php echo $_SESSION['raff-criado'] ?></span>, foi criado com sucesso! </h2>
-        
-        <p>Caso precise alterar informações ou adicionar pessoas,você pode clicar em Meus Raffs.</p>
-      
-        
-        <div class="botoes">
-            <a href="index.php" class="btn-meus-raffs-secundary"> Dashboard </a>
-            <a href="meus-raffs.php" class="btn-meus-raffs"> Meus Raffs </a>
+            <div class="botoes">
+                <a href="index.php" class="btn-meus-raffs-secundary"> Dashboard </a>
+                <a href="meus-raffs.php" class="btn-meus-raffs"> Meus Raffs </a>
+            </div>
         </div>
-   
-</section>
-
-
-
-
-
-
-
-
+    </section>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
