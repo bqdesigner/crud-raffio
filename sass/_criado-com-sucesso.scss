@@ -1,7 +1,7 @@
 .criado-com-sucesso{
     width: 100%;
     @include height(500px);
-    background-color: azure;
+    // background-color: azure;
     display: flex;
     align-items: center;
     flex-direction: column; 
@@ -15,7 +15,9 @@
             margin-top: 10rem;
         }
         span{
-            font-style: italic;
+            // font-style: italic;
+            color: $color-primary;
+            text-decoration: underline;
         }
     }
     p {

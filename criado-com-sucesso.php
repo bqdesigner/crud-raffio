@@ -16,7 +16,7 @@ include_once('actions/connection.php');
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/png">
-    <title>Meus Raffs | <?php echo $_SESSION['nome']; ?> </title>
+    <title> O Raff, <?php echo $_SESSION['raff-criado'] ?>, foi criado com sucesso! </title>
 
 </head>
 <body>
@@ -25,7 +25,7 @@ include_once('actions/connection.php');
         <div class="criado-com-sucesso">
             <img src="assets/svg/icone_conta_ativada.svg" alt="">
 
-            <h2> O Raff, <span><!--<?php echo $_SESSION['raff-criado'] ?>--></span>, foi criado com sucesso! </h2>
+            <h2> O Raff <span><?php echo $_SESSION['raff-criado'] ?></span> foi criado com sucesso! </h2>
             
             <p>Caso precise alterar informações ou adicionar pessoas,você pode clicar em Meus Raffs.</p>
         

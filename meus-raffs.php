@@ -77,7 +77,7 @@ $id_usuario = $row_usuario['id_usuario'];
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        Raff criado por <span><?php echo $_SESSION['nome'] ?></span> em <span><?php echo $data_criacao_raff->format('d/m/Y'); ?> </span>
+                                        Raff criado por <span><?php echo $_SESSION['nome'] ?></span> em <span><?php echo $data_criacao_raff->format("d/m/Y \à\s h:i"); ?></span>.
                                     </div>
                                 </div>
                                 <div class="row">
