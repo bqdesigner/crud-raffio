@@ -23,7 +23,7 @@ include_once('actions/connection.php');
     
     <section class="container">
         <div class="criado-com-sucesso">
-            <img src="assets/svg/icone_conta_ativada.svg" alt="">
+            <img src="assets/svg/icone_conta_ativada.svg" alt="Raff criado com sucesso">
 
             <h2> O Raff <span><?php echo $_SESSION['raff-criado'] ?></span> foi criado com sucesso! </h2>
             

@@ -4,11 +4,27 @@
     // align-items: center;
     // flex-direction: column; 
     // justify-content: center;
-    min-height: 800px;
+    min-height: 700px;
     h1 {
         @extend %titulo-create-raff;
         font-family: $roboto-b;
         color: $color-secundary;
         margin-bottom: 3rem;
+    }
+    .col-info-dash {
+        text-align: center;
+        border-right: 1px solid rgba($color-context-gray, .5);
+        @include height(150px);
+        h3 {
+            font-family: $roboto-b;
+            color: $color-secundary;
+            @extend %titulo-1;
+            margin-bottom: 2rem;
+        }
+        p {
+            font-family: $roboto-b;
+            color: $color-primary;
+            @include fontSize(48px);
+        }
     }
 }

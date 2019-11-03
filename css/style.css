@@ -39,11 +39,11 @@
   font-size: 1.875rem;
 }
 
-.lado-dir .tab-menu a, .meus-raffs h2, .perfil label {
+.lado-dir .tab-menu a, .meus-raffs h2, .perfil label, .dashboard .col-info-dash h3, .bem-vindo h1, .bem-vindo .swiper-slide .info-walk h2 {
   font-size: 1.375rem;
 }
 
-.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .progress-raff h3, .meus-raffs .no-raff, .modal .modal-body, .criado-com-sucesso p {
+.lado-dir #texto-login-criar, .input-group .placeholder, .create-raff #formCreateRaff .nome-imagem, .create-raff #formCreateRaff .placeholder-textarea, .progress-raff h3, .meus-raffs .no-raff, .modal .modal-body, .criado-com-sucesso p, .bem-vindo .swiper-slide .info-walk p {
   font-size: 1rem;
 }
 
@@ -51,7 +51,7 @@
   font-size: 0.75rem;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar, .criado-com-sucesso .btn-meus-raffs-secundary {
+.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .erro404 .btn-erro, .bem-vindo .btn-pular, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar, .criado-com-sucesso .btn-meus-raffs-secundary {
   border-radius: 7px;
   padding: 1rem 3rem;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -63,18 +63,18 @@
   border: none;
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover, .criado-com-sucesso .btn-meus-raffs-secundary:hover {
+.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .erro404 .btn-erro:hover, .bem-vindo .btn-pular:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover, .criado-com-sucesso .btn-meus-raffs-secundary:hover {
   text-decoration: none;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .btn-criar-raff, .landing header a {
+.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .erro404 .btn-erro, .bem-vindo .btn-pular, .btn-criar-raff, .landing header a {
   background-color: #eb3107;
   color: #ffffff;
   -webkit-box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
   box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .btn-criar-raff:hover, .landing header a:hover {
+.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .erro404 .btn-erro:hover, .bem-vindo .btn-pular:hover, .btn-criar-raff:hover, .landing header a:hover {
   background-color: #d12b06;
   color: #ffffff;
   -webkit-box-shadow: 0px 11px 22px rgba(235, 49, 7, 0.1);
@@ -852,13 +852,31 @@
 
 .dashboard {
   width: 100%;
-  min-height: 800px;
+  min-height: 700px;
 }
 
 .dashboard h1 {
   font-family: "Roboto-bold";
   color: #2e3131;
   margin-bottom: 3rem;
+}
+
+.dashboard .col-info-dash {
+  text-align: center;
+  border-right: 1px solid rgba(191, 191, 191, 0.5);
+  height: 9.375rem;
+}
+
+.dashboard .col-info-dash h3 {
+  font-family: "Roboto-bold";
+  color: #2e3131;
+  margin-bottom: 2rem;
+}
+
+.dashboard .col-info-dash p {
+  font-family: "Roboto-bold";
+  color: #eb3107;
+  font-size: 3rem;
 }
 
 .criado-com-sucesso {
@@ -909,6 +927,118 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.erro404 {
+  width: 100%;
+  height: 31.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5rem;
+}
+
+.erro404 img {
+  width: 20rem;
+  height: auto;
+}
+
+.erro404 h2 {
+  font-family: "Roboto-bold";
+  font-size: 1.875rem;
+  margin: 4rem 0 2rem 0;
+}
+
+.bem-vindo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 2rem;
+}
+
+.bem-vindo .logo {
+  margin-bottom: 2rem;
+}
+
+.bem-vindo h1 {
+  font-family: "Roboto-bold";
+  color: #2e3131;
+  margin-bottom: 2rem;
+}
+
+.bem-vindo h1 span {
+  color: #eb3107;
+}
+
+.bem-vindo .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.bem-vindo .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 31.25rem;
+}
+
+.bem-vindo .swiper-slide .info-walk {
+  margin-top: 1rem;
+}
+
+.bem-vindo .swiper-slide .info-walk h2 {
+  font-family: "Roboto-bold";
+  color: #2e3131;
+}
+
+.bem-vindo .swiper-slide .info-walk p {
+  font-family: "Roboto-regular";
+  color: #bfbfbf;
+}
+
+.bem-vindo .swiper-pagination {
+  width: 100%;
+  padding-top: 2rem;
+}
+
+.bem-vindo .swiper-pagination .swiper-pagination-bullet-active {
+  background: #eb3107;
+}
+
+.bem-vindo .btn-pular {
+  margin-top: 2rem;
 }
 
 .new-raff {

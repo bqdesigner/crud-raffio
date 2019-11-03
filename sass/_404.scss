@@ -1,0 +1,21 @@
+.erro404 {
+    width: 100%;
+    @include height(500px);
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    margin-top: 5rem;
+    img {
+        @include width(320px);
+        height: auto;
+    }
+    h2 {
+        font-family: $roboto-b;
+        @include fontSize(30px);
+        margin: 4rem 0 2rem 0;
+    }
+    .btn-erro {
+        @extend %button-primary;
+    }
+}

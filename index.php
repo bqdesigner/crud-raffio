@@ -26,19 +26,10 @@ include('actions/verifica-login.php');
         <?php include "includes/footer-page.php" ?>
     </section>
 
-    <!-- modal -->
-    <!-- <section class="modal-container" data-modal="container">
-        <div class="modal">
-        <button data-modal="fechar" class="fechar"> X </button>
-            <h2> Tem certeza que deseja sair? </h2>
-            <a href="actions/logout.php"> <img src="assets/icones/icone_sair.png" alt="Finalizar sessão" class="mr-3 img-icone"> Sair</a>
-        </div>
-    </section> -->
     <!-- scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <!-- <script src="js/modal.js"></script> -->
     <!-- <script src="js/ajax.js"></script> -->
 </body>
 </html>

@@ -1,0 +1,57 @@
+.bem-vindo {
+    display: flex;
+    align-items: center;
+    flex-direction: column; 
+    justify-content: center;
+    margin-top: 2rem;
+    .logo {
+        margin-bottom: 2rem;
+    }
+    h1 {
+        font-family: $roboto-b;
+        @extend %titulo-1;
+        color: $color-secundary;
+        margin-bottom: 2rem;
+        span {
+            color: $color-primary;
+        }
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        @include height(500px);
+        .info-walk {
+            margin-top: 1rem;
+            h2 {
+                font-family: $roboto-b;
+                @extend %titulo-1;
+                color: $color-secundary;
+            }
+            p {
+                font-family: $roboto-r;
+                @extend %texto;
+                color: $color-context-gray;
+            }
+        }
+    }
+    .swiper-pagination {
+        width: 100%;
+        padding-top: 2rem;
+        .swiper-pagination-bullet-active {
+            background: $color-primary;
+        }
+        
+    }
+    .btn-pular {
+        margin-top: 2rem;
+        @extend %button-primary;
+    }
+}
