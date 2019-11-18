@@ -12,8 +12,8 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
 $id_usuario = $row_usuario ['id_usuario'];
 
 // Infos da conta
-$arrayDados = mysqli_fetch_array($resultado_usuario);
-$data_criacao_conta = new DateTime($arrayDados['data_cadastro']);
+//$arrayDados = mysqli_fetch_array($resultado_usuario);
+$data_criacao_conta = new DateTime($row_usuario['data_cadastro']);
 
 // Infos do Raff
 $sql = "SELECT count(*) as count_raff from novo_raff where id_usuario = '{$id_usuario}'";
