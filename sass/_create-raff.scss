@@ -73,6 +73,13 @@
             display: inline-block;
             margin-top: 2rem;
         }
+        #preview-image img {
+            @include width(200px);
+            @include height(200px);
+            border-radius: 100px;
+            background: white;
+            margin: 2rem 0 2rem 0;
+        }
         .placeholder-textarea {
             font-family: $roboto-r;
             @extend %texto;

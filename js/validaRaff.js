@@ -64,13 +64,28 @@ inputRef.onblur = function() {
 
 
 // Inserindo o caminho da imagem dentro uma label
-const btnUpload = document.getElementById('imagem_proj');
-function exibeNome(e) {
-    const spanImage = document.querySelector('.nome-imagem');
-    const nameImage = e.target.files[0].name;
-    spanImage.innerText = nameImage;
-}   
-btnUpload.addEventListener('change', exibeNome);
+// const btnUpload = document.getElementById('imagem_proj');
+// function exibeNome(e) {
+//     const spanImage = document.querySelector('.nome-imagem');
+//     const nameImage = e.target.files[0].name;
+//     spanImage.innerText = nameImage;
+// }   
+// btnUpload.addEventListener('change', exibeNome);
+const file = document.getElementById('imagem_proj').addEventListener('change', function() {
+    var cURL = window.URL || window.webkitURL;
+    var imgURL = cURL.createObjectURL(this.files[0]);
+    var previewImage = document.getElementById('preview-image');
+    if (imgURL == '') {
+        previewImage.style.display = "none";
+        console.log('sem imagem');
+        steps[4] = 0;
+    }
+    else {
+        previewImage.innerHTML = '<img src="'+ imgURL +'" />';
+        console.log('com imagem');
+        steps[4] = 1;
+    }
+})
 
 // Validando considerações do Raff
 document.getElementById('desc_consideracao_proj').onblur = function() {

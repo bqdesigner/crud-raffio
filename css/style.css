@@ -516,6 +516,14 @@
   margin-top: 2rem;
 }
 
+.create-raff #formCreateRaff #preview-image img {
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 100px;
+  background: white;
+  margin: 2rem 0 2rem 0;
+}
+
 .create-raff #formCreateRaff .placeholder-textarea {
   font-family: "Roboto-regular";
   position: absolute;

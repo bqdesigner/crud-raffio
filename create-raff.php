@@ -56,10 +56,11 @@ include('actions/verifica-login.php');
                 <div id="msgErro"></div>
                 <h2> 5 - Uploads </h2>
                 <div class="input-group">
-                <input type="file" name="imagem_proj" id="imagem_proj" />
-                <label for="imagem_proj">Carregue uma imagem</label>
-                <span class="nome-imagem"> </span>
+                    <input type="file" name="imagem_proj" id="imagem_proj" />
+                    <label for="imagem_proj">Carregue uma imagem</label>
+                    <!-- <span class="nome-imagem"> </span> -->
                 </div>
+                <div id="preview-image"></div>
                 <h2> 6 - Considerações </h2>
                 <div class="input-group">
                     <textarea id="desc_consideracao_proj" name="desc_consideracao_proj" required></textarea>
