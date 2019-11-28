@@ -32,7 +32,7 @@ include('actions/verifica-login.php');
                 <div id="msgErro"></div>
                 <h2> 2 - Em qual categoria está o seu Raff? </h2>
                 <div class="input-group">
-                <select class="categ" name="categ_proj">
+                <select class="categ" name="categ_proj" id="categ_proj">  
                     <option value=''>Escolha uma categoria</option>
                     <option value='Web Design'>Web Design</option>
                     <option value='Design Gráfico'>Design Gráfico</option>

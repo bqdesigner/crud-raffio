@@ -79,11 +79,13 @@ const file = document.getElementById('imagem_proj').addEventListener('change', f
         previewImage.style.display = "none";
         console.log('sem imagem');
         steps[4] = 0;
+        progress();
     }
     else {
         previewImage.innerHTML = '<img src="'+ imgURL +'" />';
         console.log('com imagem');
         steps[4] = 1;
+        progress();
     }
 })
 
@@ -129,6 +131,16 @@ inputEmail.onblur = function() {
 	}
 };
 
+const inputCateg = document.getElementById('categ_proj');
+    inputCateg.onchange = function(){
+        if(inputCateg.value == ""){
+            steps[1] = 0;
+        }else{
+            steps[1] = 1;
+        }
+        
+        progress();
+    }
 
 // Barra progresso
 let steps = [0, 0, 0, 0, 0, 0, 0];
@@ -137,6 +149,6 @@ function progress() {
     steps.forEach((step)=>  {
         if (step) i++;
     });
-    $(".update-raff").animate({width: i*100+"px"}, 650); 
+    $(".update-raff").animate({width: i*151+"px"}, 650); 
 }
 
