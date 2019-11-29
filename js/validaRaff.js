@@ -149,6 +149,6 @@ function progress() {
     steps.forEach((step)=>  {
         if (step) i++;
     });
-    $(".update-raff").animate({width: i*151+"px"}, 650); 
+    $(".update-raff").animate({width: i*14.28+"%"}, 650);
 }
 

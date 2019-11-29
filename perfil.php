@@ -49,15 +49,15 @@ $row_usuario = mysqli_fetch_assoc($resultado_usuario);
                     </form>
                 </div>
             </div>
-            <div class="row info-conta">
+            <!-- <div class="row info-conta">
                 <div class="col-12 col-md-4">
                     
                 </div>
                 <div class="col-12 col-md-8"> 
                     <h2> Conta </h2>
-                    <!-- <a href="javascript:;" class="btn-create-terciary button-primary mr-5"> Inativar conta </a> -->
+                    <a href="javascript:;" class="btn-create-terciary button-primary mr-5"> Inativar conta </a> 
                 </div>
-            </div>
+            </div> -->
         </main>
         <?php include "includes/footer-page.php" ?>
     </section>
