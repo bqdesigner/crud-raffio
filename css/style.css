@@ -51,7 +51,7 @@
   font-size: 0.75rem;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .erro404 .btn-erro, .bem-vindo .btn-pular, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar, .criado-com-sucesso .btn-meus-raffs-secundary {
+.btn-login, #report-space #enviar, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .erro404 .btn-erro, .bem-vindo .btn-pular, .btn-criar-raff, .landing header a, .btn-login-secundary, .btn-create-secundary, .modal .btn-cancelar, .criado-com-sucesso .btn-meus-raffs-secundary {
   border-radius: 7px;
   padding: 1rem 3rem;
   -webkit-transition: all 0.3s ease-in-out 0s;
@@ -63,18 +63,18 @@
   border: none;
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .erro404 .btn-erro:hover, .bem-vindo .btn-pular:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover, .criado-com-sucesso .btn-meus-raffs-secundary:hover {
+.btn-login:hover, #report-space #enviar:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .erro404 .btn-erro:hover, .bem-vindo .btn-pular:hover, .btn-criar-raff:hover, .landing header a:hover, .btn-login-secundary:hover, .btn-create-secundary:hover, .modal .btn-cancelar:hover, .criado-com-sucesso .btn-meus-raffs-secundary:hover {
   text-decoration: none;
 }
 
-.btn-login, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .erro404 .btn-erro, .bem-vindo .btn-pular, .btn-criar-raff, .landing header a {
+.btn-login, #report-space #enviar, .create-raff #formCreateRaff #imagem_proj + label, .btn-create, .perfil input[type=submit], .modal .btn-sair, .criado-com-sucesso .btn-meus-raffs, .erro404 .btn-erro, .bem-vindo .btn-pular, .btn-criar-raff, .landing header a {
   background-color: #eb3107;
   color: #ffffff;
   -webkit-box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
   box-shadow: 0px 21px 32px rgba(235, 49, 7, 0.2);
 }
 
-.btn-login:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .erro404 .btn-erro:hover, .bem-vindo .btn-pular:hover, .btn-criar-raff:hover, .landing header a:hover {
+.btn-login:hover, #report-space #enviar:hover, .create-raff #formCreateRaff #imagem_proj + label:hover, .btn-create:hover, .perfil input:hover[type=submit], .modal .btn-sair:hover, .criado-com-sucesso .btn-meus-raffs:hover, .erro404 .btn-erro:hover, .bem-vindo .btn-pular:hover, .btn-criar-raff:hover, .landing header a:hover {
   background-color: #d12b06;
   color: #ffffff;
   -webkit-box-shadow: 0px 11px 22px rgba(235, 49, 7, 0.1);
@@ -364,6 +364,7 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-top: 2px solid #eb3107;
+  position: relative;
 }
 
 .header-page nav {
@@ -404,6 +405,46 @@
 
 .header-page .logout a:hover {
   color: #ab2405;
+}
+
+#report-space {
+  z-index: 1000;
+  width: 18.75rem;
+  height: 25rem;
+  -webkit-box-shadow: 0px 11px 22px rgba(46, 49, 49, 0.1);
+  box-shadow: 0px 11px 22px rgba(46, 49, 49, 0.1);
+  padding: 1rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #ffffff;
+  margin-top: 1.5rem;
+  display: none;
+  position: absolute;
+  left: 60%;
+}
+
+#report-space h2 {
+  font-family: "Roboto-bold";
+  font-size: 1.25rem;
+  margin: .5rem 0 1rem 0;
+}
+
+#report-space textarea {
+  font-family: "Roboto-regular";
+  font-size: 1rem;
+  background: none;
+  width: 100%;
+  height: 12.5rem;
+  border-radius: 7px;
+  border: 1px solid #2e3131;
+  padding: 20px 20px 0 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  resize: none;
+  outline: none;
+  margin: .5rem 0 1.5rem 0;
 }
 
 .footer-page {

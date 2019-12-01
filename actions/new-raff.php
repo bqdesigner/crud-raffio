@@ -1,6 +1,6 @@
 <?php
-
 session_start();
+include_once('verifica-login.php');
 include_once('connection.php');
 
 // Pegando o ID do usuário
@@ -73,9 +73,7 @@ if (isset($_POST['enviar'])) {
 			
 			// Inserindo Raff no BD
             $sql = "INSERT INTO novo_raff (id_usuario, nome_projeto, categ_projeto, ideia, ref, upload, consideracao, finalizar_raff, data_criacao) VALUES ('$id_usuario', '$nome_raff','$categ_raff', '$desc_ideia', '$ref', '$nome_imagem', '$consideracao', '$finalizar_raff', NOW())";
-
             $inserirRaff = mysqli_query($conexao, $sql);
-
             header('Location: ../criado-com-sucesso.php');
             exit();
                     

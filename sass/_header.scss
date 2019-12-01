@@ -8,6 +8,7 @@
     justify-content: space-between;
     @extend %sombra-1;
     border-top: 2px solid $color-primary;
+    position: relative;
     nav {
         @include transition(all 0.3s ease-in-out 0s);
         ul {
@@ -39,5 +40,41 @@
                 color: $color-primary-strong;
             }
         }
+    }
+}
+
+#report-space {
+    z-index: 1000;
+    @include width(300px);
+    @include height(400px);
+    @include box-shadow(0px 11px 22px rgba($color-secundary, 0.1));
+    padding: 1rem;
+    flex-direction: column; 
+    background-color: $default-color-1;
+    margin-top: 1.5rem;
+    display: none;
+    position: absolute;
+    left: 60%;
+    h2 {
+        font-family: $roboto-b;
+        @include fontSize(20px);
+        margin: .5rem 0 1rem 0;
+    }
+    textarea {
+        font-family: $roboto-r;
+        @include fontSize(16px);
+        background: none;
+        width: 100%;
+        @include height(200px);
+        border-radius: 7px;
+        border: 1px solid $color-secundary;
+        padding: 20px 20px 0 20px;
+        box-sizing: border-box;
+        resize: none;
+        outline: none;
+        margin: .5rem 0 1.5rem 0;
+    }
+    #enviar {
+        @extend %button-primary;
     }
 }

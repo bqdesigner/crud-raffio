@@ -30,7 +30,7 @@
                 <a href="#criar"> Não possui conta? </a>
             </div>
             <div class="item" id="entrar" data-target="entrar">
-                <form id="formContatoLogin" class="" method="POST" onsubmit="return validForm()" action="actions/valid-login.php">
+                <form id="formContatoLogin"  method="POST" onsubmit="return validForm()" action="actions/valid-login.php">
                     <div class="input-group">
                         <input type="text" id="usuario" name="usuario" autocomplete="off" required>
                         <span class="placeholder">Nome de usuário</span>
@@ -59,7 +59,7 @@
         <div class="login-criar" data-group="criar">
             <div class="item" id="criar" data-target="criar">
                 <p id="texto-login-criar"> Para usar o Raff.io crie a sua conta preenchendo os campos abaixo: </p>
-                <form id="formContatoCadastrar" class="" method="POST" onsubmit="return submitForm()" action="actions/cadastrar.php">
+                <form id="formContatoCadastrar" method="POST" onsubmit="return submitForm()" action="actions/cadastrar.php">
                     <div class="input-group">
                         <input type="text" id="nome" name="nome" required autocomplete="off"> 
                         <span class="placeholder">Seu nome</span>
@@ -92,10 +92,10 @@
                 </form>
             </div>
         </div>
-        <footer class="footer-login mx-0">
+        <!-- <footer class="footer-login mx-0">
             <span> <img src="assets/icones/icone_politica_privacidade.png" alt="Política de Privacidade"> Políticas de Privacidade </span>
             <span> <img src="assets/icones/icone_faq.png" alt="FAQ"> Consulte nosso FAQ </span>
-        </footer>
+        </footer> -->
     </div>
 
     <!-- scripts -->

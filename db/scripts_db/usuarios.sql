@@ -50,4 +50,17 @@ desc novo_raff;
 drop table novo_raff;
 truncate novo_raff;
 
+/* Tabela para reportar erro */
+create table report (
+	id_erro int not null auto_increment,
+    id_usuario int not null,
+    report varchar(1000) not null,
+    primary key (id_erro)
+);
+
+select * from report;
+desc report;
+drop table report;
+truncate report;
+
 
