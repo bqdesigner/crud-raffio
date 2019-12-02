@@ -61,22 +61,22 @@
                 <p id="texto-login-criar"> Para usar o Raff.io crie a sua conta preenchendo os campos abaixo: </p>
                 <form id="formContatoCadastrar" method="POST" onsubmit="return submitForm()" action="actions/cadastrar.php">
                     <div class="input-group">
-                        <input type="text" id="nome" name="nome" required autocomplete="off"> 
+                        <input type="text" id="nome" name="novo_nome" required autocomplete="off"> 
                         <span class="placeholder">Seu nome</span>
                     </div>
                     <div id="msgErro"></div>
                     <div class="input-group">
-                        <input type="text" id="novo-usuario" name="novo-usuario" required autocomplete="off">
+                        <input type="text" id="novo-usuario" name="novo_usuario" required autocomplete="off">
                         <span class="placeholder">Usuário</span>
                     </div>
                     <div id="msgErro"></div>
                     <div class="input-group">
-                        <input type="text" id="novo-email" name="novo-email" required autocomplete="off">
+                        <input type="text" id="novo-email" name="novo_email" required autocomplete="off">
                         <span class="placeholder">E-mail</span>
                     </div>
                     <div id="msgErro"></div>
                     <div class="input-group">
-                        <input type="password" id="nova-senha" name="nova-senha" required>
+                        <input type="password" id="nova-senha" name="nova_senha" required>
                         <span class="placeholder">Senha</span>
                     </div>
                     <div id="msgErro"></div>

@@ -1,63 +1,64 @@
-// Ajax ao cadastrar
-function submitForm() {
-	var data = $("#formContatoCadastrar").serialize();
-	// console.log(data);
-	$.ajax({
-		type: 'POST',
-		url: './actions/cadastrar.php',
-		data: data,
-		beforeSend: function () {
-			console.log("Sending...")
-		},
-		success: function (data) {
-			console.log(data);
-			data = JSON.parse(data);
-			if (data.error) {
-				$('.msg-attention').css("display", "block");
-				setTimeout(function () {
-					$('.msg-attention').css("display", "none");
-				}, 3000);
-			}
-			else {
-				$('.msg-success').css("display", "block");;
-				$('#entrar-btn').click();
-				$('#usuario').val($('#novo-usuario').val());
-				$('#senha').focus();
-				$(':input', '#formContatoCadastrar').not(':button, :submit, :reset, :hidden').val('');
-			}
-		}
-	});
-	return false;
-}
-
-// // Cadastro via Ajax-POST
+// // Ajax ao cadastrar
 // function submitForm() {
-// 	// event.preventDefault();
-// 	var ajax = new XMLHttpRequest();
-// 	ajax.onreadystatechange = function(){
-// 		if (ajax.readyState == 4 && ajax.status == 200) {
-// 			alert (ajax.responseText);
+// 	var data = $("#formContatoCadastrar").serialize();
+// 	// console.log(data);
+// 	$.ajax({
+// 		type: 'POST',
+// 		url: './actions/cadastrar.php',
+// 		data: data,
+// 		beforeSend: function () {
+// 			console.log("Sending...")
+// 		},
+// 		success: function (data) {
+// 			console.log(data);
+// 			data = JSON.parse(data);
+// 			if (data.error) {
+// 				$('.msg-attention').css("display", "block");
+// 				setTimeout(function () {
+// 					$('.msg-attention').css("display", "none");
+// 				}, 3000);
+// 			}
+// 			else {
+// 				$('.msg-success').css("display", "block");;
+// 				$('#entrar-btn').click();
+// 				$('#usuario').val($('#novo-usuario').val());
+// 				$('#senha').focus();
+// 				$(':input', '#formContatoCadastrar').not(':button, :submit, :reset, :hidden').val('');
+// 			}
 // 		}
-
-// 		var nome = document.getElementById("nome").value;
-// 		var usuario = document.getElementById("novo-usuario").value;
-// 		var email = document.getElementById("novo-email").value;
-// 		var senha = document.getElementById("nova-senha").value;
-
-// 		var user = new Object();
-// 		user.nome = nome;
-// 		user.usuario = usuario;
-// 		user.email = email;
-// 		user.senha = senha;
-
-// 		var json = JSON.stringify(user);
-
-// 		ajax.open("POST", "../actions/cadastrar.php", true);
-// 		ajax.setRequestHeader("Content-type","application/json");
-// 		ajax.send(json);
-// 	}
-// 	// return false;
+// 	});
+// 	return false;
 // }
+
+// Cadastro via Ajax-POST
+function submitForm() {
+	event.preventDefault();
+	var ajax = new XMLHttpRequest();
+	ajax.onreadystatechange = function(){
+		if (ajax.readyState == 4 && ajax.status == 200) {
+			alert (ajax.responseText);
+		}
+
+		var nome = document.getElementById("nome").value;
+		var usuario = document.getElementById("novo-usuario").value;
+		var email = document.getElementById("novo-email").value;
+		var senha = document.getElementById("nova-senha").value;
+
+		var user = {
+			nome: nome,
+			usuario: usuario,
+			email: email,
+			senha: senha
+		}
+
+		var json = JSON.stringify(user);
+
+		ajax.open("POST", "../actions/cadastrar.php", true);
+		ajax.setRequestHeader("Content-type","application/json");
+		ajax.send(json);
+	}
+	// return false;
+}
 
 // Ajax ao logar
 function validForm() {
