@@ -41,7 +41,17 @@
     }
     .conteudo {
         width: 100%;
-        @include height(1000px);
+        margin-top: 2rem;
+        h2 {
+            font-family: $roboto-b;
+            @extend %titulo-1;
+            color: $color-secundary;
+        }
+        p {
+            font-family: $roboto-r;
+            @extend %texto;
+            color: $color-context-gray;
+        }
     }
     footer{
         width: 100%;

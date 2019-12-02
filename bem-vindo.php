@@ -49,24 +49,24 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/svg/ilustra_walk_1.svg" alt="">
+                        <img src="assets/svg/ilustra_walk_1.svg" alt="Organize suas ideias em Raffs">
                         <div class="info-walk">
                             <h2> Organize suas ideias em Raffs </h2>
-                            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, similique fuga ab inventore nesciunt doloribus autem repellat possimus.</p>
+                            <p> Um Raff é como chamamos o seu Job. E nele você pode colocar as suas ideias que você espera que o profissional, o seu parceiro ou o seu time faça..</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/svg/ilustra_walk_2.svg" alt="">
+                        <img src="assets/svg/ilustra_walk_2.svg" alt="Os melhores insights em um só lugar">
                         <div class="info-walk">
-                            <h2> Organize suas ideias em Raffs </h2>
-                            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, similique fuga ab inventore nesciunt doloribus autem repellat possimus.</p>
+                            <h2> Os melhores insights em um só lugar </h2>
+                            <p> Um Raff foi pensado para centralizar as principais informações do seu projeto. Mantenha sempre atualizado para que todos do seu time estejam atualizados também.</p>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/svg/ilustra_walk_3.svg" alt="">
+                        <img src="assets/svg/ilustra_walk_3.svg" alt="Gerencie seus Raffs">
                         <div class="info-walk">
-                            <h2> Organize suas ideias em Raffs </h2>
-                            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, similique fuga ab inventore nesciunt doloribus autem repellat possimus.</p>
+                            <h2> Gerencie seus Raffs </h2>
+                            <p> Em nossa plataforma, você controla os seus Raffs, podendo edita-los, ver estatísticas da sua conta e muito mais.</p>
                         </div>
                     </div>
                 </div>

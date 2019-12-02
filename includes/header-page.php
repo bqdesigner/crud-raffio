@@ -11,15 +11,34 @@
                         <li> <a href="dashboard.php"> Dashboard </a> </li>
                         <li> <a href="meus-raffs.php"> Meus Raffs </a> </li>
                         <li> <a href="perfil.php"> Perfil </a> </li>
+                        <li> <a href="javascript:;" id="report"> Reportar </a> </li>
+                        <div id="report-space">
+                          <form id="formReport" action="actions/report.php" onsubmit="return validaReport()" method="POST">
+                            <h2> Informe o erro: </h2>
+                            <textarea name="infoReport" id="infoReport" cols="20" rows="7"></textarea>
+                            <button id="enviar" name="enviarReport" type="submit" class="btn-report button-primary"> Enviar </button>
+                          </form>
+                        </div>
                     </ul>
                 </nav> 
             </div>
             <div class="col-md-2">
-                <span class="logout"><a data-toggle="modal" data-target="#modalSair"> <img src="assets/icones/icone_sair.png" alt="Finalizar sessão" class="mr-3 img-icone"> Sair</a></span>
+                <span class="logout">
+                  <a data-toggle="modal" data-target="#modalSair"> 
+                    <img src="assets/icones/icone_sair.png" alt="Finalizar sessão" class="mr-3 img-icone"> 
+                    Sair
+                  </a>
+                </span>
+                <!-- <span class="report">
+                  <img src="assets/icones/icone_report.png" alt="Reportar erro"> 
+                  Reportar erro 
+                </span> -->
             </div>
         </div>
     </div>
 </header>
+
+
 
 <!-- Modal -->
 <div class="modal fade" id="modalSair" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -41,3 +60,6 @@
     </div>
   </div>
 </div>
+
+<script src="js/report.js"></script>
+

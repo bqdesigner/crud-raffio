@@ -151,4 +151,3 @@ function progress() {
     });
     $(".update-raff").animate({width: i*14.28+"%"}, 650);
 }
-
