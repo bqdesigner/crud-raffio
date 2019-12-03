@@ -1,3 +1,5 @@
+create database db_pi;
+
 use db_pi;	
 
 /* Tabela criação usuários */

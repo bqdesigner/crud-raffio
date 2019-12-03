@@ -29,38 +29,16 @@ $id_usuario = $row_usuario['id_usuario'];
         <?php include "includes/header-page.php" ?>
         <main class="container mt-5 pt-5 meus-raffs">
             <h1> Meus Raffs </h1>
-            <div class="row">
-                <?php
-                $sql = "SELECT * FROM novo_raff where id_usuario = '{$id_usuario}'";
-                $buscaRaff = mysqli_query($conexao, $sql);
-                $row = mysqli_num_rows($buscaRaff);
-                if ($row != 0) {
-                    while ($array = mysqli_fetch_array($buscaRaff)) {
-                        $id_busca_usuario = $array['id_usuario'];
-                        $id_raff = $array['id_raff'];
-                        $raff = $array['nome_projeto'];
-                        $categ = $array['categ_projeto'];
-                        $ideia = $array['ideia'];
-                        $ref = $array['ref'];
-                        $imagem = $array['upload'];
-                        $consideracoes = $array['consideracao'];
-                        $email_enviado = $array['finalizar_raff'];
-                        $data_criacao_raff = new DateTime($array['data_criacao']);
-                        $enviado = $array['finalizar_raff'];
-
-                        ?>
-                <div class="raff">
+            <div class="row" id="raffs">
+                
+                <div class="raff" style="display: none" id="template-raff">
                     <a data-toggle="modal" data-target="#modalInfoRaff">
-                        <h2> <?php echo $raff ?> </h2>
+                        <h2> titulo </h2>
                     </a>
-                    <!-- <ul>
-                        <li> Categoria: <?php echo $categ ?> </li>
-                        <li> Enviado para: <?php echo $enviado ?>  </li>
-                    </ul> -->
                     <div class="links">
-                        <a id="editar_raff" href="editar-raff.php?id=<?php echo $id_raff ?>"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
+                        <a id="editar_raff" href="editar-raff.php?id=xx"> <img src="assets/icones/icone_editar.png" alt="Editar"> Editar Raff </a>
                         
-                        <a id="excluir_raff" class="excluir_raff" data-toggle="modal" data-target="#modalExcluir" data-id="<?php echo $id_raff ?>"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
+                        <a id="excluir_raff" class="excluir_raff" data-toggle="modal" data-target="#modalExcluir" data-id="1"> <img src="assets/icones/icone_adicionar.png" alt="Excluir" class="excluir"> Excluir Raff </a>
                     </div>
                 </div>
 
@@ -69,7 +47,7 @@ $id_usuario = $row_usuario['id_usuario'];
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel"> <img src="assets/icones/icone_form.png" class="mr-3 img-icone" alt="Raff <?php echo $raff ?>"> <span><?php echo $raff ?></span> </h5>
+                                <h5 class="modal-title" id="exampleModalLabel"> <img src="assets/icones/icone_form.png" class="mr-3 img-icone" alt="Raff 1"> <span>nome</span> </h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
                                 <span aria-hidden="true">&times;</span>
                                 </button>
@@ -77,7 +55,7 @@ $id_usuario = $row_usuario['id_usuario'];
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="col-12">
-                                        Raff criado por <span><?php echo $_SESSION['nome'] ?></span> em <span><?php echo $data_criacao_raff->format("d/m/Y \à\s h:i"); ?></span>.
+                                        Raff criado por <span>usuario</span> em <span>data</span>.
                                     </div>
                                 </div>
                                 <div class="row">
@@ -88,19 +66,10 @@ $id_usuario = $row_usuario['id_usuario'];
                         </div>
                     </div>
                 </div>
-
-                <?php
-
-            }
-        } else { ?>
-                    <div class="no-raff">
-                        <p> Você não tem nenhum Raff criado. </p>
-                        <img src="assets/svg/ilustra_meus_raffs.svg" alt="">
-                    </div>
-                <?php
-
-            }
-            ?>
+                <div class="no-raff" style="display: none">
+                    <p> Você não tem nenhum Raff criado. </p>
+                    <img src="assets/svg/ilustra_meus_raffs.svg" alt="">
+               </div>
             </div>
             <div class="row cta-criar-raff my-5 py-5">
                 <a href="create-raff.php" class="btn-criar-raff"> <img src="assets/icones/icone_adicionar_branco.png" alt="Novo Raff" class="mr-3 img-icone"> Criar raff</a>
@@ -144,8 +113,44 @@ $id_usuario = $row_usuario['id_usuario'];
         });
 
         // Modal ao Exibir o Raff
-        
+    
+    </script>
+    <script>
+    function createRaff() {
+        //event.preventDefault();
+        var ajax = new XMLHttpRequest();
+        ajax.onreadystatechange = function () {
+            if (ajax.readyState == 4 && ajax.status == 200) {
+                let data = JSON.parse(ajax.responseText);
+                if (data.length == 0) {
+                    document.querySelector('.no-raff').style.display = "flex";
+                } else {
 
+                    for(index in data){
+
+                        let nome_projeto = data[index].nome_projeto;
+                        let id = data[index].id_raff;
+                        
+                        let template = document.querySelector('#template-raff')
+                        
+                        let new_raff = template.cloneNode(true);
+                        new_raff.style.display = "flex";
+                        new_raff.id = "raff_"+id;
+                        document.getElementById("raffs").appendChild(new_raff);
+                        new_raff.children[0].children[0].innerHTML = nome_projeto;
+                        new_raff.children[1].children[0].href = "editar-raff.php?id="+id;
+                                                                     
+
+                    }
+                }
+            }
+        }
+        ajax.open("POST", "./actions/raff.php", true);
+        ajax.setRequestHeader("Content-type", "application/json");
+        ajax.send(JSON.stringify(""));
+        return false;
+    }
+    createRaff();
     </script>
     
 </body>
